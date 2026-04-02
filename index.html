@@ -27,31 +27,31 @@ DESIGN DECISIONS FOR ACCESSIBILITY & TRUST:
 - Line height 1.8 — breathing room between lines
 - Large tap targets for mobile
 - WCAG AA contrast ratios met throughout
-*/
+  */
 
 :root {
-–navy: #1a2744;
-–navy-card: #22305a;
-–navy-dark: #111b33;
-–navy-border: #2e4080;
-–gold: #f0c040;
-–gold-dark: #c89a20;
-–gold-text: #ffe080;
-–white: #f5f0e8;
-–white-soft: #dde4f0;
-–text-body: #e8e2d6;
-–text-muted: #a8b8d8;
-–green-trust: #2ecc71;
-–font-head: ‘Nunito’, ‘Arial Rounded MT Bold’, Arial, sans-serif;
-–font-body: ‘Lato’, Arial, sans-serif;
+--navy:        #1a2744;
+--navy-card:   #22305a;
+--navy-dark:   #111b33;
+--navy-border: #2e4080;
+--gold:        #f0c040;
+--gold-dark:   #c89a20;
+--gold-text:   #ffe080;
+--white:       #f5f0e8;
+--white-soft:  #dde4f0;
+--text-body:   #e8e2d6;
+--text-muted:  #a8b8d8;
+--green-trust: #2ecc71;
+--font-head:   'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif;
+--font-body:   'Lato', Arial, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-background: var(–navy);
-color: var(–text-body);
-font-family: var(–font-body);
+background: var(--navy);
+color: var(--text-body);
+font-family: var(--font-body);
 font-size: 17px;
 font-weight: 400;
 line-height: 1.8;
@@ -64,7 +64,7 @@ display: block;
 width: 100%;
 height: 3px;
 border: none;
-background: linear-gradient(90deg, transparent, var(–gold) 30%, var(–gold) 70%, transparent);
+background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
 opacity: 0.4;
 }
 
@@ -72,44 +72,44 @@ opacity: 0.4;
 display: inline-flex;
 align-items: center;
 gap: 0.6rem;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.8rem;
 font-weight: 800;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–gold);
+color: var(--gold);
 margin-bottom: 0.75rem;
 }
 .section-tag::before {
-content: ‘’;
+content: '';
 display: inline-block;
 width: 24px;
 height: 3px;
-background: var(–gold);
+background: var(--gold);
 border-radius: 2px;
 flex-shrink: 0;
 }
 
 h2 {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: clamp(1.9rem, 4vw, 2.8rem);
 font-weight: 900;
-color: var(–white);
+color: var(--white);
 line-height: 1.2;
 margin-bottom: 0.75rem;
 }
 
 h3 {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-weight: 800;
-color: var(–white);
+color: var(--white);
 line-height: 1.3;
 }
 
 .section-intro {
 font-size: 1.05rem;
 line-height: 1.85;
-color: var(–text-body);
+color: var(--text-body);
 max-width: 60ch;
 margin-bottom: 2.5rem;
 }
@@ -123,8 +123,8 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 1rem 2.5rem;
-background: var(–navy-dark);
-border-bottom: 3px solid var(–gold);
+background: var(--navy-dark);
+border-bottom: 3px solid var(--gold);
 }
 
 .nav-brand {
@@ -134,20 +134,20 @@ text-decoration: none;
 line-height: 1.2;
 }
 .nav-brand-name {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.35rem;
 font-weight: 900;
-color: var(–white);
+color: var(--white);
 letter-spacing: 0.05em;
 }
-.nav-brand-name span { color: var(–gold); }
+.nav-brand-name span { color: var(--gold); }
 .nav-brand-tag {
-font-family: var(–font-body);
+font-family: var(--font-body);
 font-size: 0.72rem;
 font-weight: 700;
 letter-spacing: 0.12em;
 text-transform: uppercase;
-color: var(–text-muted);
+color: var(--text-muted);
 }
 
 .nav-links {
@@ -156,22 +156,22 @@ gap: 2rem;
 list-style: none;
 }
 .nav-links a {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.9rem;
 font-weight: 700;
-color: var(–white-soft);
+color: var(--white-soft);
 text-decoration: none;
 transition: color 0.2s;
 padding: 0.25rem 0;
 }
-.nav-links a:hover { color: var(–gold); }
+.nav-links a:hover { color: var(--gold); }
 
 .nav-book {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.9rem;
 font-weight: 800;
-background: var(–gold);
-color: var(–navy-dark);
+background: var(--gold);
+color: var(--navy-dark);
 padding: 0.65rem 1.6rem;
 text-decoration: none;
 border-radius: 6px;
@@ -193,7 +193,7 @@ overflow: hidden;
 
 /* Soft glow behind hero text */
 #hero::before {
-content: ‘’;
+content: '';
 position: absolute;
 top: 20%;
 left: -10%;
@@ -214,44 +214,44 @@ align-items: center;
 }
 
 .hero-eyebrow {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.82rem;
 font-weight: 800;
 letter-spacing: 0.25em;
 text-transform: uppercase;
-color: var(–gold);
+color: var(--gold);
 margin-bottom: 1.25rem;
 display: flex;
 align-items: center;
 gap: 0.75rem;
 }
 .hero-eyebrow::before {
-content: ‘’;
+content: '';
 display: block;
 width: 30px;
 height: 3px;
-background: var(–gold);
+background: var(--gold);
 border-radius: 2px;
 flex-shrink: 0;
 }
 
 h1 {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-weight: 900;
 font-size: clamp(2.4rem, 5.5vw, 4.2rem);
 line-height: 1.1;
-color: var(–white);
+color: var(--white);
 margin-bottom: 1.25rem;
 }
 h1 em {
 font-style: normal;
-color: var(–gold);
+color: var(--gold);
 }
 
 .hero-sub {
 font-size: 1.15rem;
 line-height: 1.85;
-color: var(–text-body);
+color: var(--text-body);
 margin-bottom: 2rem;
 max-width: 48ch;
 }
@@ -263,10 +263,10 @@ gap: 0.6rem;
 margin-bottom: 2.5rem;
 }
 .badge {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.78rem;
 font-weight: 700;
-color: var(–white);
+color: var(--white);
 background: rgba(255,255,255,0.1);
 border: 2px solid rgba(240,192,64,0.4);
 border-radius: 20px;
@@ -280,11 +280,11 @@ flex-wrap: wrap;
 }
 
 .btn-gold {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1rem;
 font-weight: 800;
-background: var(–gold);
-color: var(–navy-dark);
+background: var(--gold);
+color: var(--navy-dark);
 padding: 0.9rem 2.2rem;
 text-decoration: none;
 border: none;
@@ -296,14 +296,14 @@ transition: background 0.2s, transform 0.15s;
 .btn-gold:hover { background: #ffe070; transform: translateY(-2px); }
 
 .btn-outline {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1rem;
 font-weight: 800;
 background: transparent;
-color: var(–gold);
+color: var(--gold);
 padding: 0.9rem 2.2rem;
 text-decoration: none;
-border: 2px solid var(–gold);
+border: 2px solid var(--gold);
 border-radius: 8px;
 display: inline-block;
 transition: background 0.2s, color 0.2s;
@@ -317,36 +317,36 @@ grid-template-columns: 1fr 1fr;
 gap: 1rem;
 }
 .stat-card {
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 12px;
 padding: 1.5rem 1.25rem;
 text-align: center;
 transition: border-color 0.2s;
 }
-.stat-card:hover { border-color: var(–gold); }
+.stat-card:hover { border-color: var(--gold); }
 .stat-num {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 2.4rem;
 font-weight: 900;
-color: var(–gold);
+color: var(--gold);
 line-height: 1;
 margin-bottom: 0.4rem;
 }
 .stat-label {
-font-family: var(–font-body);
+font-family: var(--font-body);
 font-size: 0.8rem;
 font-weight: 700;
-color: var(–text-muted);
+color: var(--text-muted);
 text-transform: uppercase;
 letter-spacing: 0.08em;
 }
 
 /* ── TRUST STRIP ── */
 .trust-strip {
-background: var(–navy-dark);
-border-top: 3px solid var(–gold);
-border-bottom: 1px solid var(–navy-border);
+background: var(--navy-dark);
+border-top: 3px solid var(--gold);
+border-bottom: 1px solid var(--navy-border);
 padding: 1.25rem 2.5rem;
 display: flex;
 align-items: center;
@@ -358,10 +358,10 @@ flex-wrap: wrap;
 display: flex;
 align-items: center;
 gap: 0.6rem;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.82rem;
 font-weight: 700;
-color: var(–white-soft);
+color: var(--white-soft);
 letter-spacing: 0.05em;
 }
 .trust-icon { font-size: 1.1rem; }
@@ -380,8 +380,8 @@ gap: 1.5rem;
 }
 
 .service-card {
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 16px;
 padding: 2.25rem 1.75rem;
 display: flex;
@@ -389,24 +389,24 @@ flex-direction: column;
 transition: border-color 0.25s, transform 0.2s;
 }
 .service-card:hover {
-border-color: var(–gold);
+border-color: var(--gold);
 transform: translateY(-4px);
 }
 .service-card.featured {
-border-color: var(–gold);
+border-color: var(--gold);
 background: #253568;
 position: relative;
 }
 
 .featured-tag {
 display: inline-block;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.72rem;
 font-weight: 800;
 letter-spacing: 0.15em;
 text-transform: uppercase;
-color: var(–navy-dark);
-background: var(–gold);
+color: var(--navy-dark);
+background: var(--gold);
 padding: 0.25rem 0.8rem;
 border-radius: 12px;
 margin-bottom: 1rem;
@@ -420,23 +420,23 @@ line-height: 1;
 }
 
 .service-title {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.2rem;
 font-weight: 900;
-color: var(–white);
+color: var(--white);
 margin-bottom: 0.75rem;
 }
 
 .service-desc {
 font-size: 0.95rem;
 line-height: 1.8;
-color: var(–text-body);
+color: var(--text-body);
 margin-bottom: 1.75rem;
 flex: 1;
 }
 
 .pricing-table {
-border-top: 2px solid var(–navy-border);
+border-top: 2px solid var(--navy-border);
 padding-top: 1.25rem;
 display: flex;
 flex-direction: column;
@@ -449,20 +449,20 @@ justify-content: space-between;
 padding: 0.4rem 0;
 }
 .pricing-time {
-font-family: var(–font-body);
+font-family: var(--font-body);
 font-size: 0.9rem;
 font-weight: 700;
-color: var(–text-body);
+color: var(--text-body);
 }
 .pricing-amount {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.15rem;
 font-weight: 900;
-color: var(–gold);
+color: var(--gold);
 }
 .pricing-note {
 font-size: 0.82rem;
-color: var(–text-muted);
+color: var(--text-muted);
 margin-top: 0.6rem;
 line-height: 1.6;
 font-style: italic;
@@ -470,9 +470,9 @@ font-style: italic;
 
 /* ── HOW IT WORKS ── */
 #how {
-background: var(–navy-dark);
-border-top: 1px solid var(–navy-border);
-border-bottom: 1px solid var(–navy-border);
+background: var(--navy-dark);
+border-top: 1px solid var(--navy-border);
+border-bottom: 1px solid var(--navy-border);
 padding: 6rem 2.5rem;
 }
 .how-inner {
@@ -486,39 +486,39 @@ gap: 1.5rem;
 margin-top: 3rem;
 }
 .step {
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 16px;
 padding: 2rem 1.5rem;
 text-align: center;
 transition: border-color 0.2s;
 }
-.step:hover { border-color: var(–gold); }
+.step:hover { border-color: var(--gold); }
 .step-num {
 width: 3.5rem;
 height: 3.5rem;
-border: 3px solid var(–gold);
+border: 3px solid var(--gold);
 border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.4rem;
 font-weight: 900;
-color: var(–gold);
+color: var(--gold);
 margin: 0 auto 1.25rem;
 }
 .step-title {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1rem;
 font-weight: 800;
-color: var(–white);
+color: var(--white);
 margin-bottom: 0.6rem;
 }
 .step-desc {
 font-size: 0.9rem;
 line-height: 1.75;
-color: var(–text-body);
+color: var(--text-body);
 }
 
 /* ── PAYMENT ── */
@@ -536,7 +536,7 @@ align-items: center;
 .payment-info > p {
 font-size: 1rem;
 line-height: 1.85;
-color: var(–text-body);
+color: var(--text-body);
 margin-bottom: 1.75rem;
 max-width: 44ch;
 }
@@ -550,16 +550,16 @@ gap: 1rem;
 display: flex;
 gap: 1rem;
 align-items: flex-start;
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 12px;
 padding: 1rem 1.25rem;
 }
 .pay-step-num {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.4rem;
 font-weight: 900;
-color: var(–gold);
+color: var(--gold);
 line-height: 1;
 flex-shrink: 0;
 width: 1.75rem;
@@ -569,24 +569,24 @@ padding-top: 0.1rem;
 .pay-step-text {
 font-size: 0.92rem;
 line-height: 1.65;
-color: var(–text-body);
+color: var(--text-body);
 }
 .pay-step-text strong {
-color: var(–white);
+color: var(--white);
 font-weight: 700;
 }
 
 /* PayPal box */
 .paypal-box {
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 16px;
 padding: 2.5rem;
 position: relative;
 overflow: hidden;
 }
 .paypal-box::before {
-content: ‘’;
+content: '';
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 4px;
@@ -594,17 +594,17 @@ background: linear-gradient(90deg, #003087 50%, #009cde 100%);
 }
 
 .paypal-label {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.78rem;
 font-weight: 800;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–text-muted);
+color: var(--text-muted);
 margin-bottom: 1.25rem;
 }
 
 .paypal-logo-text {
-font-family: var(–font-body);
+font-family: var(--font-body);
 font-size: 2rem;
 font-weight: 900;
 letter-spacing: -0.02em;
@@ -616,11 +616,11 @@ margin-bottom: 1.25rem;
 .paypal-desc {
 font-size: 0.95rem;
 line-height: 1.75;
-color: var(–text-body);
+color: var(--text-body);
 margin-bottom: 1.75rem;
 }
 .paypal-desc strong {
-color: var(–white);
+color: var(--white);
 font-weight: 700;
 }
 
@@ -633,7 +633,7 @@ width: 100%;
 padding: 1.1rem 2rem;
 background: #ffc439;
 color: #003087;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1rem;
 font-weight: 800;
 text-decoration: none;
@@ -647,7 +647,7 @@ cursor: pointer;
 
 .paypal-note {
 font-size: 0.85rem;
-color: var(–text-muted);
+color: var(--text-muted);
 text-align: center;
 line-height: 1.6;
 }
@@ -658,18 +658,18 @@ align-items: center;
 justify-content: center;
 gap: 0.5rem;
 margin-top: 1rem;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.75rem;
 font-weight: 700;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-color: var(–green-trust);
+color: var(--green-trust);
 }
 
 /* ── CONTACT ── */
 #contact {
-background: var(–navy-dark);
-border-top: 1px solid var(–navy-border);
+background: var(--navy-dark);
+border-top: 1px solid var(--navy-border);
 padding: 6rem 2.5rem;
 }
 .contact-inner {
@@ -685,7 +685,7 @@ align-items: start;
 .contact-left > p {
 font-size: 1rem;
 line-height: 1.85;
-color: var(–text-body);
+color: var(--text-body);
 margin-bottom: 2rem;
 max-width: 40ch;
 }
@@ -699,12 +699,12 @@ gap: 0.85rem;
 display: flex;
 align-items: center;
 gap: 0.85rem;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.9rem;
 font-weight: 700;
-color: var(–text-body);
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+color: var(--text-body);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 10px;
 padding: 0.75rem 1rem;
 }
@@ -715,26 +715,26 @@ flex-shrink: 0;
 
 /* Form panel */
 .contact-form-panel {
-background: var(–navy-card);
-border: 2px solid var(–navy-border);
+background: var(--navy-card);
+border: 2px solid var(--navy-border);
 border-radius: 16px;
 padding: 2.5rem;
 position: relative;
 overflow: hidden;
 }
 .contact-form-panel::before {
-content: ‘’;
+content: '';
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 4px;
-background: linear-gradient(90deg, var(–gold), var(–gold-dark));
+background: linear-gradient(90deg, var(--gold), var(--gold-dark));
 }
 
 .form-title {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.2rem;
 font-weight: 900;
-color: var(–white);
+color: var(--white);
 margin-bottom: 1.75rem;
 }
 
@@ -743,20 +743,20 @@ margin-bottom: 1.25rem;
 }
 .form-group label {
 display: block;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.88rem;
 font-weight: 800;
-color: var(–white-soft);
+color: var(--white-soft);
 margin-bottom: 0.45rem;
 }
 .form-group input,
 .form-group select,
 .form-group textarea {
 width: 100%;
-background: var(–navy);
-border: 2px solid var(–navy-border);
-color: var(–white);
-font-family: var(–font-body);
+background: var(--navy);
+border: 2px solid var(--navy-border);
+color: var(--white);
+font-family: var(--font-body);
 font-size: 1rem;
 font-weight: 400;
 padding: 0.8rem 1rem;
@@ -769,24 +769,24 @@ appearance: none;
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-border-color: var(–gold);
+border-color: var(--gold);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-color: var(–text-muted);
+color: var(--text-muted);
 opacity: 1;
 }
 .form-group select {
-background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘14’ height=‘9’ viewBox=‘0 0 14 9’%3E%3Cpath d=‘M1 1l6 6 6-6’ stroke=’%23a8b8d8’ stroke-width=‘2’ fill=‘none’ stroke-linecap=‘round’ stroke-linejoin=‘round’/%3E%3C/svg%3E”);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23a8b8d8' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 background-repeat: no-repeat;
 background-position: right 1rem center;
-background-color: var(–navy);
+background-color: var(--navy);
 padding-right: 2.75rem;
 cursor: pointer;
 }
 .form-group select option {
-background: var(–navy-dark);
-color: var(–white);
+background: var(--navy-dark);
+color: var(--white);
 }
 .form-group textarea {
 resize: vertical;
@@ -802,7 +802,7 @@ gap: 1rem;
 /* Error message */
 .form-error {
 display: none;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.88rem;
 font-weight: 700;
 color: #fff;
@@ -819,11 +819,11 @@ line-height: 1.5;
 .form-submit {
 width: 100%;
 margin-top: 0.25rem;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1.05rem;
 font-weight: 900;
-background: var(–gold);
-color: var(–navy-dark);
+background: var(--gold);
+color: var(--navy-dark);
 padding: 1rem;
 border: none;
 border-radius: 8px;
@@ -836,7 +836,7 @@ letter-spacing: 0.03em;
 
 .form-note {
 font-size: 0.82rem;
-color: var(–text-muted);
+color: var(--text-muted);
 text-align: center;
 margin-top: 1rem;
 line-height: 1.65;
@@ -854,12 +854,12 @@ margin-bottom: 1rem;
 }
 .form-success h3 {
 font-size: 1.6rem;
-color: var(–gold);
+color: var(--gold);
 margin-bottom: 0.75rem;
 }
 .form-success p {
 font-size: 0.95rem;
-color: var(–text-body);
+color: var(--text-body);
 line-height: 1.8;
 margin-bottom: 1.75rem;
 }
@@ -871,7 +871,7 @@ gap: 0.6rem;
 padding: 1rem 2rem;
 background: #ffc439;
 color: #003087;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1rem;
 font-weight: 800;
 text-decoration: none;
@@ -883,7 +883,7 @@ margin-bottom: 0.6rem;
 .paypal-after-note {
 display: block;
 font-size: 0.8rem;
-color: var(–text-muted);
+color: var(--text-muted);
 margin-top: 0.5rem;
 line-height: 1.5;
 }
@@ -891,8 +891,8 @@ line-height: 1.5;
 /* ── REASSURANCE BANNER ── */
 .reassurance {
 background: linear-gradient(90deg, #1a3a5c, #1a2744);
-border-top: 1px solid var(–navy-border);
-border-bottom: 1px solid var(–navy-border);
+border-top: 1px solid var(--navy-border);
+border-bottom: 1px solid var(--navy-border);
 padding: 3rem 2.5rem;
 text-align: center;
 }
@@ -903,12 +903,12 @@ margin: 0 auto;
 .reassurance h3 {
 font-size: 1.5rem;
 margin-bottom: 0.75rem;
-color: var(–gold);
+color: var(--gold);
 }
 .reassurance p {
 font-size: 1rem;
 line-height: 1.85;
-color: var(–text-body);
+color: var(--text-body);
 }
 .reassurance-items {
 display: flex;
@@ -921,17 +921,17 @@ margin-top: 1.75rem;
 display: flex;
 align-items: center;
 gap: 0.6rem;
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.9rem;
 font-weight: 700;
-color: var(–white-soft);
+color: var(--white-soft);
 }
 .reassurance-item span:first-child { font-size: 1.3rem; }
 
 /* ── FOOTER ── */
 footer {
-background: var(–navy-dark);
-border-top: 3px solid var(–gold);
+background: var(--navy-dark);
+border-top: 3px solid var(--gold);
 padding: 2.5rem 2.5rem;
 display: flex;
 align-items: center;
@@ -940,18 +940,18 @@ flex-wrap: wrap;
 gap: 1.5rem;
 }
 .footer-brand {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 1rem;
 font-weight: 900;
 letter-spacing: 0.08em;
 text-transform: uppercase;
-color: var(–white);
+color: var(--white);
 text-decoration: none;
 }
-.footer-brand span { color: var(–gold); }
+.footer-brand span { color: var(--gold); }
 .footer-copy {
 font-size: 0.82rem;
-color: var(–text-muted);
+color: var(--text-muted);
 }
 .footer-links {
 display: flex;
@@ -959,14 +959,14 @@ gap: 1.75rem;
 list-style: none;
 }
 .footer-links a {
-font-family: var(–font-head);
+font-family: var(--font-head);
 font-size: 0.85rem;
 font-weight: 700;
-color: var(–text-muted);
+color: var(--text-muted);
 text-decoration: none;
 transition: color 0.2s;
 }
-.footer-links a:hover { color: var(–gold); }
+.footer-links a:hover { color: var(--gold); }
 
 /* ── SCROLL REVEAL ── */
 .reveal {
@@ -1015,202 +1015,202 @@ h1 { font-size: 2rem; }
 <!-- NAV -->
 
 <nav aria-label="Main navigation">
-<a href="#hero" class="nav-brand" aria-label="Capture Corp home">
-<div class="nav-brand-name">Capture<span>Corp</span></div>
-<div class="nav-brand-tag">Tech Help by Appointment</div>
-</a>
-<ul class="nav-links">
-<li><a href="#services">Services</a></li>
-<li><a href="#how">How It Works</a></li>
-<li><a href="#payment">Payment</a></li>
-<li><a href="#contact">Book a Session</a></li>
-</ul>
-<a href="#contact" class="nav-book">Book Now</a>
+  <a href="#hero" class="nav-brand" aria-label="Capture Corp home">
+    <div class="nav-brand-name">Capture<span>Corp</span></div>
+    <div class="nav-brand-tag">Tech Help by Appointment</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#contact">Book a Session</a></li>
+  </ul>
+  <a href="#contact" class="nav-book">Book Now</a>
 </nav>
 
 <!-- HERO -->
 
 <section id="hero" aria-label="Introduction">
-<div class="hero-inner">
-<div>
-<div class="hero-eyebrow">Capture Corp &mdash; Tech Help by Appointment</div>
-<h1>Real Help.<br>Real Results.<br><em>On Your Time.</em></h1>
-<p class="hero-sub">
-Live, one-on-one Zoom sessions for AI setup, computer help, Microsoft Office guidance, and professional document drafting. Clear steps. Plain language. Victory every session.
-</p>
-<div class="hero-badges">
-<span class="badge">&#129302; AI Setup</span>
-<span class="badge">&#128187; Computer Help</span>
-<span class="badge">&#128196; Microsoft Office</span>
-<span class="badge">&#9997; Document Drafting</span>
-<span class="badge">&#128249; Live via Zoom</span>
-</div>
-<div class="hero-ctas">
-<a href="#services" class="btn-gold">See Services &amp; Pricing</a>
-<a href="#contact" class="btn-outline">Request a Session</a>
-</div>
-</div>
-<div class="hero-stats">
-<div class="stat-card">
-<div class="stat-num">10</div>
-<div class="stat-label">Min Sessions</div>
-</div>
-<div class="stat-card">
-<div class="stat-num">40</div>
-<div class="stat-label">Min Full Session</div>
-</div>
-<div class="stat-card">
-<div class="stat-num">1:1</div>
-<div class="stat-label">Live on Zoom</div>
-</div>
-<div class="stat-card">
-<div class="stat-num">3</div>
-<div class="stat-label">Service Tracks</div>
-</div>
-</div>
-</div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Capture Corp &mdash; Tech Help by Appointment</div>
+      <h1>Real Help.<br>Real Results.<br><em>On Your Time.</em></h1>
+      <p class="hero-sub">
+        Live, one-on-one Zoom sessions for AI setup, computer help, Microsoft Office guidance, and professional document drafting. Clear steps. Plain language. Victory every session.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">&#129302; AI Setup</span>
+        <span class="badge">&#128187; Computer Help</span>
+        <span class="badge">&#128196; Microsoft Office</span>
+        <span class="badge">&#9997; Document Drafting</span>
+        <span class="badge">&#128249; Live via Zoom</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#services" class="btn-gold">See Services &amp; Pricing</a>
+        <a href="#contact" class="btn-outline">Request a Session</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Min Sessions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">40</div>
+        <div class="stat-label">Min Full Session</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1:1</div>
+        <div class="stat-label">Live on Zoom</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Service Tracks</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- TRUST STRIP -->
 
 <div class="trust-strip" role="list">
-<div class="trust-item" role="listitem"><span class="trust-icon">&#128274;</span> Safe &amp; Private</div>
-<div class="trust-item" role="listitem"><span class="trust-icon">&#128249;</span> Live via Zoom</div>
-<div class="trust-item" role="listitem"><span class="trust-icon">&#128179;</span> PayPal Protected</div>
-<div class="trust-item" role="listitem"><span class="trust-icon">&#128218;</span> Plain Language Always</div>
-<div class="trust-item" role="listitem"><span class="trust-icon">&#9203;</span> 1-Day Response</div>
+  <div class="trust-item" role="listitem"><span class="trust-icon">&#128274;</span> Safe &amp; Private</div>
+  <div class="trust-item" role="listitem"><span class="trust-icon">&#128249;</span> Live via Zoom</div>
+  <div class="trust-item" role="listitem"><span class="trust-icon">&#128179;</span> PayPal Protected</div>
+  <div class="trust-item" role="listitem"><span class="trust-icon">&#128218;</span> Plain Language Always</div>
+  <div class="trust-item" role="listitem"><span class="trust-icon">&#9203;</span> 1-Day Response</div>
 </div>
 
 <!-- SERVICES -->
 
 <section id="services" aria-label="Services and pricing">
-<div class="section-tag">What We Offer</div>
-<h2>Services &amp; Pricing</h2>
-<p class="section-intro">Pick the service and time block that fits your situation. All sessions happen live on Zoom. You stay in control the whole time.</p>
+  <div class="section-tag">What We Offer</div>
+  <h2>Services &amp; Pricing</h2>
+  <p class="section-intro">Pick the service and time block that fits your situation. All sessions happen live on Zoom. You stay in control the whole time.</p>
 
-<div class="services-grid">
-<div class="service-card reveal">
-<div class="service-icon">&#129302;</div>
-<div class="service-title">AI Setup &amp; Walkthrough</div>
-<p class="service-desc">We walk you through setting up AI tools like ChatGPT, Google Gemini, or Claude &mdash; step by step, in plain English. No experience needed at all.</p>
-<div class="pricing-table">
-<div class="pricing-row">
-<span class="pricing-time">10 Minutes</span>
-<span class="pricing-amount">$10</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">15 Minutes</span>
-<span class="pricing-amount">$15</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">25 Minutes</span>
-<span class="pricing-amount">$25</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">40 Minutes</span>
-<span class="pricing-amount">$35</span>
-</div>
-<p class="pricing-note">Great for complete beginners. We go at your pace.</p>
-</div>
-</div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">&#129302;</div>
+      <div class="service-title">AI Setup &amp; Walkthrough</div>
+      <p class="service-desc">We walk you through setting up AI tools like ChatGPT, Google Gemini, or Claude &mdash; step by step, in plain English. No experience needed at all.</p>
+      <div class="pricing-table">
+        <div class="pricing-row">
+          <span class="pricing-time">10 Minutes</span>
+          <span class="pricing-amount">$10</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-time">15 Minutes</span>
+          <span class="pricing-amount">$15</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-time">25 Minutes</span>
+          <span class="pricing-amount">$25</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-time">40 Minutes</span>
+          <span class="pricing-amount">$35</span>
+        </div>
+        <p class="pricing-note">Great for complete beginners. We go at your pace.</p>
+      </div>
+    </div>
 
-```
+
 <div class="service-card featured reveal">
-<span class="featured-tag">Most Requested</span>
-<div class="service-icon">&#9997;</div>
-<div class="service-title">Document &amp; Letter Drafting</div>
-<p class="service-desc">We have a quick Zoom conversation to understand what you need &mdash; then we write your letter or document and send it straight to your email or phone.</p>
-<div class="pricing-table">
-<div class="pricing-row">
-<span class="pricing-time">Consult + 1 Document</span>
-<span class="pricing-amount">$20</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">Consult + Revisions</span>
-<span class="pricing-amount">$30</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">Rush Delivery</span>
-<span class="pricing-amount">+$10</span>
-</div>
-<p class="pricing-note">Cover letters, dispute letters, formal requests, appeals &amp; more. Delivered by email or text.</p>
-</div>
+  <span class="featured-tag">Most Requested</span>
+  <div class="service-icon">&#9997;</div>
+  <div class="service-title">Document &amp; Letter Drafting</div>
+  <p class="service-desc">We have a quick Zoom conversation to understand what you need &mdash; then we write your letter or document and send it straight to your email or phone.</p>
+  <div class="pricing-table">
+    <div class="pricing-row">
+      <span class="pricing-time">Consult + 1 Document</span>
+      <span class="pricing-amount">$20</span>
+    </div>
+    <div class="pricing-row">
+      <span class="pricing-time">Consult + Revisions</span>
+      <span class="pricing-amount">$30</span>
+    </div>
+    <div class="pricing-row">
+      <span class="pricing-time">Rush Delivery</span>
+      <span class="pricing-amount">+$10</span>
+    </div>
+    <p class="pricing-note">Cover letters, dispute letters, formal requests, appeals &amp; more. Delivered by email or text.</p>
+  </div>
 </div>
 
 <div class="service-card reveal">
-<div class="service-icon">&#128187;</div>
-<div class="service-title">Computer &amp; Microsoft Help</div>
-<p class="service-desc">Having trouble with your computer or Microsoft Office? Word, Excel, Outlook, printers, file transfers &mdash; we walk through it with you live until it&rsquo;s fixed.</p>
-<div class="pricing-table">
-<div class="pricing-row">
-<span class="pricing-time">10 Minutes</span>
-<span class="pricing-amount">$15</span>
+  <div class="service-icon">&#128187;</div>
+  <div class="service-title">Computer &amp; Microsoft Help</div>
+  <p class="service-desc">Having trouble with your computer or Microsoft Office? Word, Excel, Outlook, printers, file transfers &mdash; we walk through it with you live until it&rsquo;s fixed.</p>
+  <div class="pricing-table">
+    <div class="pricing-row">
+      <span class="pricing-time">10 Minutes</span>
+      <span class="pricing-amount">$15</span>
+    </div>
+    <div class="pricing-row">
+      <span class="pricing-time">15 Minutes</span>
+      <span class="pricing-amount">$22</span>
+    </div>
+    <div class="pricing-row">
+      <span class="pricing-time">25 Minutes</span>
+      <span class="pricing-amount">$35</span>
+    </div>
+    <div class="pricing-row">
+      <span class="pricing-time">40 Minutes</span>
+      <span class="pricing-amount">$50</span>
+    </div>
+    <p class="pricing-note">Priced slightly higher because these issues take more time and focus to resolve.</p>
+  </div>
 </div>
-<div class="pricing-row">
-<span class="pricing-time">15 Minutes</span>
-<span class="pricing-amount">$22</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">25 Minutes</span>
-<span class="pricing-amount">$35</span>
-</div>
-<div class="pricing-row">
-<span class="pricing-time">40 Minutes</span>
-<span class="pricing-amount">$50</span>
-</div>
-<p class="pricing-note">Priced slightly higher because these issues take more time and focus to resolve.</p>
-</div>
-</div>
-```
 
-</div>
+
+  </div>
 </section>
 
 <!-- REASSURANCE BANNER -->
 
 <div class="reassurance reveal">
-<div class="reassurance-inner">
-<h3>You Are Safe Here.</h3>
-<p>We understand that getting help online can feel scary &mdash; especially when it involves technology and payments. Everything here is straightforward, honest, and designed with your comfort in mind.</p>
-<div class="reassurance-items">
-<div class="reassurance-item"><span>&#9989;</span> No surprise charges</div>
-<div class="reassurance-item"><span>&#9989;</span> You confirm the price before paying</div>
-<div class="reassurance-item"><span>&#9989;</span> PayPal is the world&rsquo;s most trusted payment system</div>
-<div class="reassurance-item"><span>&#9989;</span> We go at your speed, always</div>
-</div>
-</div>
+  <div class="reassurance-inner">
+    <h3>You Are Safe Here.</h3>
+    <p>We understand that getting help online can feel scary &mdash; especially when it involves technology and payments. Everything here is straightforward, honest, and designed with your comfort in mind.</p>
+    <div class="reassurance-items">
+      <div class="reassurance-item"><span>&#9989;</span> No surprise charges</div>
+      <div class="reassurance-item"><span>&#9989;</span> You confirm the price before paying</div>
+      <div class="reassurance-item"><span>&#9989;</span> PayPal is the world&rsquo;s most trusted payment system</div>
+      <div class="reassurance-item"><span>&#9989;</span> We go at your speed, always</div>
+    </div>
+  </div>
 </div>
 
 <!-- HOW IT WORKS -->
 
 <section id="how" aria-label="How it works">
-<div class="how-inner">
-<div class="section-tag">The Process</div>
-<h2>How It Works</h2>
-<p class="section-intro">Four simple steps. No confusion, no runaround. You&rsquo;ll know exactly what to expect before you spend a single dollar.</p>
-<div class="steps">
-<div class="step reveal">
-<div class="step-num">1</div>
-<div class="step-title">Fill Out the Form</div>
-<p class="step-desc">Scroll down and fill out the short request form. Tell us what you need help with in your own words.</p>
-</div>
-<div class="step reveal">
-<div class="step-num">2</div>
-<div class="step-title">We Confirm &amp; Quote You</div>
-<p class="step-desc">We email you within one business day with your session time and the exact amount to pay &mdash; no surprises.</p>
-</div>
-<div class="step reveal">
-<div class="step-num">3</div>
-<div class="step-title">Pay Safely via PayPal</div>
-<p class="step-desc">Pay the agreed amount through PayPal. No PayPal account required &mdash; any debit or credit card works fine.</p>
-</div>
-<div class="step reveal">
-<div class="step-num">4</div>
-<div class="step-title">Join Your Zoom Session</div>
-<p class="step-desc">We send you a simple Zoom link. Click it and we&rsquo;ll be there, ready to help. You walk away with your problem solved.</p>
-</div>
-</div>
-</div>
+  <div class="how-inner">
+    <div class="section-tag">The Process</div>
+    <h2>How It Works</h2>
+    <p class="section-intro">Four simple steps. No confusion, no runaround. You&rsquo;ll know exactly what to expect before you spend a single dollar.</p>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div class="step-title">Fill Out the Form</div>
+        <p class="step-desc">Scroll down and fill out the short request form. Tell us what you need help with in your own words.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <div class="step-title">We Confirm &amp; Quote You</div>
+        <p class="step-desc">We email you within one business day with your session time and the exact amount to pay &mdash; no surprises.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <div class="step-title">Pay Safely via PayPal</div>
+        <p class="step-desc">Pay the agreed amount through PayPal. No PayPal account required &mdash; any debit or credit card works fine.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <div class="step-title">Join Your Zoom Session</div>
+        <p class="step-desc">We send you a simple Zoom link. Click it and we&rsquo;ll be there, ready to help. You walk away with your problem solved.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <hr class="gold-rule">
@@ -1218,62 +1218,62 @@ Live, one-on-one Zoom sessions for AI setup, computer help, Microsoft Office gui
 <!-- PAYMENT -->
 
 <section id="payment" aria-label="Payment information">
-<div class="payment-info reveal">
-<div class="section-tag">Secure Payment</div>
-<h2>Pay With Confidence.</h2>
-<p>All payments go through PayPal &mdash; one of the safest payment systems in the world. You do not need a PayPal account to pay.</p>
-<div class="payment-steps">
-<div class="payment-step">
-<div class="pay-step-num">1</div>
-<p class="pay-step-text"><strong>Send us your request</strong> using the form at the bottom of this page.</p>
-</div>
-<div class="payment-step">
-<div class="pay-step-num">2</div>
-<p class="pay-step-text"><strong>We confirm everything</strong> &mdash; session time, service, and exact price &mdash; by email.</p>
-</div>
-<div class="payment-step">
-<div class="pay-step-num">3</div>
-<p class="pay-step-text"><strong>Click the PayPal button</strong> and pay the agreed amount. In the notes, include your name and what you booked.</p>
-</div>
-<div class="payment-step">
-<div class="pay-step-num">4</div>
-<p class="pay-step-text"><strong>We send your Zoom link</strong> and your session begins at the scheduled time.</p>
-</div>
-</div>
-</div>
+  <div class="payment-info reveal">
+    <div class="section-tag">Secure Payment</div>
+    <h2>Pay With Confidence.</h2>
+    <p>All payments go through PayPal &mdash; one of the safest payment systems in the world. You do not need a PayPal account to pay.</p>
+    <div class="payment-steps">
+      <div class="payment-step">
+        <div class="pay-step-num">1</div>
+        <p class="pay-step-text"><strong>Send us your request</strong> using the form at the bottom of this page.</p>
+      </div>
+      <div class="payment-step">
+        <div class="pay-step-num">2</div>
+        <p class="pay-step-text"><strong>We confirm everything</strong> &mdash; session time, service, and exact price &mdash; by email.</p>
+      </div>
+      <div class="payment-step">
+        <div class="pay-step-num">3</div>
+        <p class="pay-step-text"><strong>Click the PayPal button</strong> and pay the agreed amount. In the notes, include your name and what you booked.</p>
+      </div>
+      <div class="payment-step">
+        <div class="pay-step-num">4</div>
+        <p class="pay-step-text"><strong>We send your Zoom link</strong> and your session begins at the scheduled time.</p>
+      </div>
+    </div>
+  </div>
 
-<div class="paypal-box reveal">
-<p class="paypal-label">Payment Portal</p>
-<div class="paypal-logo-text">
-<span class="pp1">Pay</span><span class="pp2">Pal</span>
-</div>
-<p class="paypal-desc">
-Use the button below to send your payment after we confirm your session. Please include your <strong>name</strong> and <strong>service booked</strong> in the PayPal notes so we can match it to your request.
-</p>
-<!--
-ACTION REQUIRED:
-Replace YOUR_PAYPAL_USERNAME with your actual PayPal.Me username.
-Example: if your link is paypal.me/capturecorp, put: capturecorp
--->
-<a
-href="https://www.paypal.me/YOUR_PAYPAL_USERNAME"
-target="_blank"
-rel="noopener noreferrer"
-class="btn-paypal"
-aria-label="Pay securely with PayPal"
->
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-<rect x="2" y="5" width="20" height="14" rx="2" stroke="#003087" stroke-width="2.5"/>
-<path d="M7 15h10M7 11h6" stroke="#003087" stroke-width="2.5" stroke-linecap="round"/>
-</svg>
-Pay Securely via PayPal
-</a>
-<p class="paypal-note">No PayPal account needed &mdash; pay with any debit or credit card through PayPal&rsquo;s secure guest checkout.</p>
-<div class="paypal-secure">
-<span aria-hidden="true">&#128274;</span>
-Secured &amp; Protected by PayPal
-</div>
-</div>
+  <div class="paypal-box reveal">
+    <p class="paypal-label">Payment Portal</p>
+    <div class="paypal-logo-text">
+      <span class="pp1">Pay</span><span class="pp2">Pal</span>
+    </div>
+    <p class="paypal-desc">
+      Use the button below to send your payment after we confirm your session. Please include your <strong>name</strong> and <strong>service booked</strong> in the PayPal notes so we can match it to your request.
+    </p>
+    <!--
+      ACTION REQUIRED:
+      Replace YOUR_PAYPAL_USERNAME with your actual PayPal.Me username.
+      Example: if your link is paypal.me/capturecorp, put: capturecorp
+    -->
+    <a
+      href="https://www.paypal.me/YOUR_PAYPAL_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-paypal"
+      aria-label="Pay securely with PayPal"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <rect x="2" y="5" width="20" height="14" rx="2" stroke="#003087" stroke-width="2.5"/>
+        <path d="M7 15h10M7 11h6" stroke="#003087" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      Pay Securely via PayPal
+    </a>
+    <p class="paypal-note">No PayPal account needed &mdash; pay with any debit or credit card through PayPal&rsquo;s secure guest checkout.</p>
+    <div class="paypal-secure">
+      <span aria-hidden="true">&#128274;</span>
+      Secured &amp; Protected by PayPal
+    </div>
+  </div>
 </section>
 
 <hr class="gold-rule">
@@ -1281,231 +1281,231 @@ Secured &amp; Protected by PayPal
 <!-- CONTACT -->
 
 <section id="contact" aria-label="Book a session">
-<div class="contact-inner">
-<div class="contact-left reveal">
-<div class="section-tag">Book a Session</div>
-<h2>Let&rsquo;s Get Started.</h2>
-<p>Fill out the short form below. We&rsquo;ll get back to you within one business day with everything you need to know &mdash; no pressure, no rush.</p>
-<div class="contact-details">
-<div class="contact-item">
-<span class="contact-icon">&#128249;</span>
-All sessions take place on Zoom
-</div>
-<div class="contact-item">
-<span class="contact-icon">&#128196;</span>
-Documents delivered by email or text
-</div>
-<div class="contact-item">
-<span class="contact-icon">&#128274;</span>
-Your information is always kept private
-</div>
-<div class="contact-item">
-<span class="contact-icon">&#128179;</span>
-Payments are secured through PayPal
-</div>
-<div class="contact-item">
-<span class="contact-icon">&#9203;</span>
-We respond within 1 business day
-</div>
-</div>
-</div>
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <div class="section-tag">Book a Session</div>
+      <h2>Let&rsquo;s Get Started.</h2>
+      <p>Fill out the short form below. We&rsquo;ll get back to you within one business day with everything you need to know &mdash; no pressure, no rush.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-icon">&#128249;</span>
+          All sessions take place on Zoom
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128196;</span>
+          Documents delivered by email or text
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128274;</span>
+          Your information is always kept private
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128179;</span>
+          Payments are secured through PayPal
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#9203;</span>
+          We respond within 1 business day
+        </div>
+      </div>
+    </div>
 
-```
+
 <div class="contact-form-panel reveal">
-<div class="form-title">Session Request Form</div>
+  <div class="form-title">Session Request Form</div>
 
-<div id="theForm">
-<div class="form-error" id="formError" role="alert" aria-live="polite"></div>
+  <div id="theForm">
+    <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
 
-<div class="form-row">
-<div class="form-group">
-<label for="fname">First Name *</label>
-<input type="text" id="fname" autocomplete="given-name" placeholder="Your first name">
-</div>
-<div class="form-group">
-<label for="lname">Last Name</label>
-<input type="text" id="lname" autocomplete="family-name" placeholder="Your last name">
-</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fname">First Name *</label>
+        <input type="text" id="fname" autocomplete="given-name" placeholder="Your first name">
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" autocomplete="family-name" placeholder="Your last name">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" autocomplete="email" placeholder="you@example.com">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number (optional &mdash; for document delivery by text)</label>
+      <input type="tel" id="phone" autocomplete="tel" placeholder="Your phone number">
+    </div>
+
+    <div class="form-group">
+      <label for="service">What Do You Need Help With? *</label>
+      <select id="service">
+        <option value="">Choose a service&hellip;</option>
+        <option value="AI Setup and Walkthrough">AI Setup &amp; Walkthrough</option>
+        <option value="Document and Letter Drafting">Document &amp; Letter Drafting</option>
+        <option value="Computer and Microsoft Help">Computer &amp; Microsoft Help</option>
+        <option value="Not sure - I need guidance">Not sure &mdash; I need guidance</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Preferred Session Length</label>
+      <select id="duration">
+        <option value="">Choose a time block&hellip;</option>
+        <option value="10 Minutes">10 Minutes</option>
+        <option value="15 Minutes">15 Minutes</option>
+        <option value="25 Minutes">25 Minutes</option>
+        <option value="40 Minutes (Full Session)">40 Minutes (Full Session)</option>
+        <option value="Consult + 1 Document">Consult + 1 Document</option>
+        <option value="Consult + Revisions">Consult + Revisions</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Describe What You Need Help With *</label>
+      <textarea id="message" placeholder="Just describe it in your own words. There are no wrong answers here."></textarea>
+    </div>
+
+    <button type="button" class="form-submit" id="submitBtn">Send My Request &rarr;</button>
+    <p class="form-note">We&rsquo;ll reply within 1 business day. We will tell you the exact price before anything happens. Your info is never shared with anyone.</p>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="form-success" id="successMsg" role="status">
+    <div class="success-icon">&#9989;</div>
+    <h3>Request Received!</h3>
+    <p>
+      Thank you for reaching out. We&rsquo;ll send you an email within one business day to confirm your session time and the exact amount to pay &mdash; no surprises.<br><br>
+      Once you receive our confirmation, you can pay safely below.
+    </p>
+    <!--
+      Replace YOUR_PAYPAL_USERNAME with your PayPal.Me username.
+    -->
+    <a
+      href="https://www.paypal.me/YOUR_PAYPAL_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-paypal-success"
+      aria-label="Pay for your session via PayPal after confirmation"
+    >
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <rect x="2" y="5" width="20" height="14" rx="2" stroke="#003087" stroke-width="2.5"/>
+        <path d="M7 15h10M7 11h6" stroke="#003087" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      Pay via PayPal After Confirmation
+    </a>
+    <span class="paypal-after-note">Please wait for our email first. Include your name and service in the PayPal notes when you pay.</span>
+  </div>
 </div>
 
-<div class="form-group">
-<label for="email">Email Address *</label>
-<input type="email" id="email" autocomplete="email" placeholder="you@example.com">
-</div>
 
-<div class="form-group">
-<label for="phone">Phone Number (optional &mdash; for document delivery by text)</label>
-<input type="tel" id="phone" autocomplete="tel" placeholder="Your phone number">
-</div>
-
-<div class="form-group">
-<label for="service">What Do You Need Help With? *</label>
-<select id="service">
-<option value="">Choose a service&hellip;</option>
-<option value="AI Setup and Walkthrough">AI Setup &amp; Walkthrough</option>
-<option value="Document and Letter Drafting">Document &amp; Letter Drafting</option>
-<option value="Computer and Microsoft Help">Computer &amp; Microsoft Help</option>
-<option value="Not sure - I need guidance">Not sure &mdash; I need guidance</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="duration">Preferred Session Length</label>
-<select id="duration">
-<option value="">Choose a time block&hellip;</option>
-<option value="10 Minutes">10 Minutes</option>
-<option value="15 Minutes">15 Minutes</option>
-<option value="25 Minutes">25 Minutes</option>
-<option value="40 Minutes (Full Session)">40 Minutes (Full Session)</option>
-<option value="Consult + 1 Document">Consult + 1 Document</option>
-<option value="Consult + Revisions">Consult + Revisions</option>
-</select>
-</div>
-
-<div class="form-group">
-<label for="message">Describe What You Need Help With *</label>
-<textarea id="message" placeholder="Just describe it in your own words. There are no wrong answers here."></textarea>
-</div>
-
-<button type="button" class="form-submit" id="submitBtn">Send My Request &rarr;</button>
-<p class="form-note">We&rsquo;ll reply within 1 business day. We will tell you the exact price before anything happens. Your info is never shared with anyone.</p>
-</div>
-
-<!-- SUCCESS -->
-<div class="form-success" id="successMsg" role="status">
-<div class="success-icon">&#9989;</div>
-<h3>Request Received!</h3>
-<p>
-Thank you for reaching out. We&rsquo;ll send you an email within one business day to confirm your session time and the exact amount to pay &mdash; no surprises.<br><br>
-Once you receive our confirmation, you can pay safely below.
-</p>
-<!--
-Replace YOUR_PAYPAL_USERNAME with your PayPal.Me username.
--->
-<a
-href="https://www.paypal.me/YOUR_PAYPAL_USERNAME"
-target="_blank"
-rel="noopener noreferrer"
-class="btn-paypal-success"
-aria-label="Pay for your session via PayPal after confirmation"
->
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-<rect x="2" y="5" width="20" height="14" rx="2" stroke="#003087" stroke-width="2.5"/>
-<path d="M7 15h10M7 11h6" stroke="#003087" stroke-width="2.5" stroke-linecap="round"/>
-</svg>
-Pay via PayPal After Confirmation
-</a>
-<span class="paypal-after-note">Please wait for our email first. Include your name and service in the PayPal notes when you pay.</span>
-</div>
-</div>
-```
-
-</div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-<a href="#hero" class="footer-brand">Capture<span>Corp</span></a>
-<div class="footer-copy">&copy; 2025 Capture Corp &middot; Tech Help by Appointment &middot; All rights reserved</div>
-<ul class="footer-links">
-<li><a href="#services">Services</a></li>
-<li><a href="#how">How It Works</a></li>
-<li><a href="#payment">Payment</a></li>
-<li><a href="#contact">Book</a></li>
-</ul>
+  <a href="#hero" class="footer-brand">Capture<span>Corp</span></a>
+  <div class="footer-copy">&copy; 2025 Capture Corp &middot; Tech Help by Appointment &middot; All rights reserved</div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#contact">Book</a></li>
+  </ul>
 </footer>
 
 <script>
 (function () {
-'use strict';
+  'use strict';
 
-/* Scroll reveal */
-var els = document.querySelectorAll('.reveal');
-if (window.IntersectionObserver) {
-var io = new IntersectionObserver(function (entries) {
-entries.forEach(function (entry, idx) {
-if (entry.isIntersecting) {
-setTimeout(function () {
-entry.target.classList.add('visible');
-}, idx * 80);
-io.unobserve(entry.target);
-}
-});
-}, { threshold: 0.08 });
-els.forEach(function (el) { io.observe(el); });
-} else {
-els.forEach(function (el) { el.classList.add('visible'); });
-}
+  /* Scroll reveal */
+  var els = document.querySelectorAll('.reveal');
+  if (window.IntersectionObserver) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, idx) {
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            entry.target.classList.add('visible');
+          }, idx * 80);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('visible'); });
+  }
 
-/* Form helpers */
-function getVal(id) {
-var el = document.getElementById(id);
-return el ? el.value.trim() : '';
-}
+  /* Form helpers */
+  function getVal(id) {
+    var el = document.getElementById(id);
+    return el ? el.value.trim() : '';
+  }
 
-function showError(msg) {
-var el = document.getElementById('formError');
-if (!el) { return; }
-el.textContent = msg;
-el.classList.add('visible');
-el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
+  function showError(msg) {
+    var el = document.getElementById('formError');
+    if (!el) { return; }
+    el.textContent = msg;
+    el.classList.add('visible');
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
 
-function clearError() {
-var el = document.getElementById('formError');
-if (!el) { return; }
-el.textContent = '';
-el.classList.remove('visible');
-}
+  function clearError() {
+    var el = document.getElementById('formError');
+    if (!el) { return; }
+    el.textContent = '';
+    el.classList.remove('visible');
+  }
 
-function isValidEmail(val) {
-return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-}
+  function isValidEmail(val) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+  }
 
-function handleSubmit() {
-clearError();
+  function handleSubmit() {
+    clearError();
 
-var fname = getVal('fname');
-var lname = getVal('lname');
-var email = getVal('email');
-var phone = getVal('phone');
-var service = getVal('service');
-var duration = getVal('duration');
-var message = getVal('message');
+    var fname    = getVal('fname');
+    var lname    = getVal('lname');
+    var email    = getVal('email');
+    var phone    = getVal('phone');
+    var service  = getVal('service');
+    var duration = getVal('duration');
+    var message  = getVal('message');
 
-if (!fname) { showError('Please enter your first name.'); return; }
-if (!email) { showError('Please enter your email address.'); return; }
-if (!isValidEmail(email)) { showError('Please enter a valid email address (example: name@gmail.com).'); return; }
-if (!service) { showError('Please choose a service from the list.'); return; }
-if (!message) { showError('Please describe what you need help with.'); return; }
+    if (!fname)               { showError('Please enter your first name.'); return; }
+    if (!email)               { showError('Please enter your email address.'); return; }
+    if (!isValidEmail(email)) { showError('Please enter a valid email address (example: name@gmail.com).'); return; }
+    if (!service)             { showError('Please choose a service from the list.'); return; }
+    if (!message)             { showError('Please describe what you need help with.'); return; }
 
-var btn = document.getElementById('submitBtn');
-if (btn) { btn.disabled = true; }
+    var btn = document.getElementById('submitBtn');
+    if (btn) { btn.disabled = true; }
 
-var subject = encodeURIComponent('Capture Corp Session Request - ' + fname);
-var bodyText =
-'NAME: ' + fname + (lname ? ' ' + lname : '') + '\n' +
-'EMAIL: ' + email + '\n' +
-'PHONE: ' + (phone || 'Not provided') + '\n' +
-'SERVICE: ' + service + '\n' +
-'DURATION: ' + (duration || 'Not selected') + '\n\n' +
-'MESSAGE:\n' + message;
+    var subject = encodeURIComponent('Capture Corp Session Request - ' + fname);
+    var bodyText =
+      'NAME: ' + fname + (lname ? ' ' + lname : '') + '\n' +
+      'EMAIL: ' + email + '\n' +
+      'PHONE: ' + (phone || 'Not provided') + '\n' +
+      'SERVICE: ' + service + '\n' +
+      'DURATION: ' + (duration || 'Not selected') + '\n\n' +
+      'MESSAGE:\n' + message;
 
-var formEl = document.getElementById('theForm');
-var successEl = document.getElementById('successMsg');
-if (formEl) { formEl.style.display = 'none'; }
-if (successEl) { successEl.style.display = 'block'; }
+    var formEl    = document.getElementById('theForm');
+    var successEl = document.getElementById('successMsg');
+    if (formEl)    { formEl.style.display    = 'none'; }
+    if (successEl) { successEl.style.display = 'block'; }
 
-setTimeout(function () {
-window.location.href = 'mailto:?subject=' + subject + '&body=' + encodeURIComponent(bodyText);
-}, 700);
-}
+    setTimeout(function () {
+      window.location.href = 'mailto:?subject=' + subject + '&body=' + encodeURIComponent(bodyText);
+    }, 700);
+  }
 
-var btn = document.getElementById('submitBtn');
-if (btn) {
-btn.addEventListener('click', handleSubmit);
-}
+  var btn = document.getElementById('submitBtn');
+  if (btn) {
+    btn.addEventListener('click', handleSubmit);
+  }
 
 }());
 </script>

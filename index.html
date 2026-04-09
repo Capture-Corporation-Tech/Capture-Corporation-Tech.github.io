@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Capture Corp Operation Tech – Friendly Tech Help for Beginners</title>
+<title>Capture Corporation Tech – Friendly Tech Help for Everyday People</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-```
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
 :root {
 --warm-white: #FDFAF5;
 --soft-cream: #F5F0E8;
---card-bg: #FFFFFF;
+--card-bg: rgba(255, 255, 255, 0.92);
 --gold: #9A6F00;
 --gold-pale: #FFF8E7;
 --text-dark: #1E1A14;
@@ -23,14 +26,22 @@
 --green: #3D6B4A;
 --green-pale: #ECF4EF;
 --green-border: #B8D4C0;
+--hero-line: rgba(61, 107, 74, 0.08);
+--hero-dot: rgba(154, 111, 0, 0.10);
 --radius: 14px;
---shadow: 0 3px 18px rgba(30,26,20,0.09);
+--shadow: 0 8px 30px rgba(30, 26, 20, 0.08);
+--shadow-soft: 0 4px 18px rgba(30, 26, 20, 0.06);
 }
 
-html { scroll-behavior: smooth; }
+html {
+scroll-behavior: smooth;
+}
 
 body {
-background: var(--warm-white);
+background:
+radial-gradient(circle at 15% 20%, rgba(154, 111, 0, 0.05), transparent 20%),
+radial-gradient(circle at 85% 15%, rgba(61, 107, 74, 0.06), transparent 22%),
+linear-gradient(180deg, #FFFEFB 0%, #F8F3EA 100%);
 color: var(--text-dark);
 font-family: 'Nunito', sans-serif;
 font-size: 19px;
@@ -38,10 +49,11 @@ line-height: 1.75;
 overflow-x: hidden;
 }
 
-/* ── NAV ── */
+/* NAV */
 nav {
-background: var(--card-bg);
-border-bottom: 2px solid var(--border);
+background: rgba(255, 255, 255, 0.88);
+backdrop-filter: blur(10px);
+border-bottom: 1.5px solid var(--border);
 padding: 1rem 5vw;
 display: flex;
 justify-content: space-between;
@@ -52,15 +64,14 @@ z-index: 100;
 }
 
 .nav-brand {
-font-size: 1.05rem;
+font-size: 1.08rem;
 font-weight: 800;
 color: var(--text-dark);
+letter-spacing: 0.01em;
 }
 
-.nav-brand span { color: var(--gold); }
-
 .nav-contact {
-display: flex;
+display: inline-flex;
 align-items: center;
 gap: 0.5rem;
 background: var(--green);
@@ -68,16 +79,60 @@ color: #fff;
 font-weight: 800;
 font-size: 0.92rem;
 text-decoration: none;
-padding: 0.55rem 1.2rem;
-border-radius: 50px;
+padding: 0.65rem 1.2rem;
+border-radius: 999px;
+box-shadow: var(--shadow-soft);
+transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-/* ── HERO ── */
+.nav-contact:hover {
+transform: translateY(-1px);
+box-shadow: 0 8px 24px rgba(61, 107, 74, 0.18);
+}
+
+/* HERO */
 header {
-background: linear-gradient(150deg, #FFFEF9 0%, #F6EFE0 100%);
-padding: 4.5rem 5vw 4rem;
+position: relative;
+overflow: hidden;
+padding: 5rem 5vw 4rem;
 text-align: center;
-border-bottom: 2px solid var(--border);
+border-bottom: 1.5px solid var(--border);
+background:
+linear-gradient(135deg, rgba(255,255,255,0.90), rgba(246,239,224,0.90));
+}
+
+/* calm tech background */
+header::before {
+content: "";
+position: absolute;
+inset: 0;
+background-image:
+linear-gradient(var(--hero-line) 1px, transparent 1px),
+linear-gradient(90deg, var(--hero-line) 1px, transparent 1px);
+background-size: 36px 36px;
+opacity: 0.55;
+pointer-events: none;
+}
+
+header::after {
+content: "";
+position: absolute;
+inset: 0;
+background:
+radial-gradient(circle at 18% 28%, var(--hero-dot) 0 2px, transparent 3px),
+radial-gradient(circle at 80% 22%, var(--hero-dot) 0 2px, transparent 3px),
+radial-gradient(circle at 72% 70%, rgba(61,107,74,0.08) 0 2px, transparent 3px),
+radial-gradient(circle at 25% 78%, rgba(61,107,74,0.06) 0 2px, transparent 3px);
+background-size: 280px 280px;
+opacity: 0.8;
+pointer-events: none;
+}
+
+.hero-inner {
+position: relative;
+z-index: 1;
+max-width: 980px;
+margin: 0 auto;
 }
 
 .hero-tag {
@@ -86,132 +141,184 @@ background: var(--green-pale);
 color: var(--green);
 font-weight: 800;
 font-size: 0.88rem;
-padding: 0.4rem 1.1rem;
-border-radius: 50px;
+padding: 0.45rem 1.1rem;
+border-radius: 999px;
 border: 1.5px solid var(--green-border);
 margin-bottom: 1.6rem;
-letter-spacing: 0.02em;
+box-shadow: var(--shadow-soft);
 }
 
 h1 {
 font-family: 'Lora', serif;
-font-size: clamp(2rem, 5.5vw, 3.6rem);
+font-size: clamp(2.1rem, 5.4vw, 3.8rem);
 font-weight: 600;
 color: var(--text-dark);
-line-height: 1.2;
-max-width: 20ch;
-margin: 0 auto 1.1rem;
+line-height: 1.18;
+max-width: 18ch;
+margin: 0 auto 1rem;
 }
 
-h1 em { font-style: italic; color: var(--gold); }
+h1 em {
+font-style: italic;
+color: var(--gold);
+}
 
 .hero-sub {
 font-family: 'Lora', serif;
 font-style: italic;
-font-size: 1.12rem;
+font-size: 1.13rem;
 color: var(--text-mid);
-max-width: 50ch;
-margin: 0 auto 2rem;
-font-weight: 400;
+max-width: 52ch;
+margin: 0 auto 1.6rem;
 }
 
 .hero-promise {
-display: inline-block;
-background: var(--gold-pale);
+background: rgba(255, 248, 231, 0.96);
 border: 1.5px solid #DFC878;
-border-radius: 12px;
-padding: 1rem 1.8rem;
-font-size: 1.05rem;
+border-radius: 16px;
+padding: 1.15rem 1.4rem;
+font-size: 1.02rem;
 font-weight: 700;
 color: var(--text-mid);
-margin-bottom: 2.5rem;
-max-width: 52ch;
-line-height: 1.6;
+margin: 0 auto 2.4rem;
+max-width: 58ch;
+line-height: 1.65;
+box-shadow: var(--shadow);
 }
 
-.hero-promise .tick { color: var(--green); margin-right: 0.4rem; }
+.tick {
+color: var(--green);
+margin-right: 0.35rem;
+}
 
-/* ── CTA BUTTONS ── */
 .cta-group {
 display: flex;
 flex-wrap: wrap;
 gap: 1rem;
 justify-content: center;
-margin-bottom: 1rem;
+align-items: stretch;
 }
 
-.btn-email {
-display: inline-flex;
-align-items: center;
-gap: 0.6rem;
-background: var(--green);
-color: #ffffff;
-font-family: 'Nunito', sans-serif;
-font-weight: 800;
-font-size: 1.05rem;
-text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 50px;
-border: none;
-}
-
+.btn-email,
 .btn-phone {
 display: inline-flex;
 align-items: center;
-gap: 0.6rem;
-background: var(--card-bg);
-color: var(--text-dark);
-font-family: 'Nunito', sans-serif;
-font-weight: 800;
-font-size: 1.05rem;
+gap: 0.9rem;
 text-decoration: none;
-padding: 1rem 2rem;
-border-radius: 50px;
+padding: 1rem 1.35rem;
+border-radius: 18px;
+min-width: 300px;
+justify-content: flex-start;
+box-shadow: var(--shadow);
+transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.btn-email:hover,
+.btn-phone:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 28px rgba(30, 26, 20, 0.10);
+}
+
+.btn-email {
+background: var(--green);
+color: #ffffff;
+border: 2px solid var(--green);
+}
+
+.btn-phone {
+background: rgba(255,255,255,0.95);
+color: var(--text-dark);
 border: 2px solid var(--border);
 }
 
+.btn-icon {
+width: 48px;
+height: 48px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+font-size: 1.2rem;
+}
+
+.btn-email .btn-icon {
+background: rgba(255,255,255,0.16);
+color: #ffffff;
+}
+
+.btn-phone .btn-icon {
+background: var(--gold-pale);
+color: var(--gold);
+}
+
+.btn-copy {
+display: flex;
+flex-direction: column;
+text-align: left;
+min-width: 0;
+flex: 1;
+}
+
 .btn-label {
-display: block;
-font-size: 0.78rem;
-font-weight: 700;
+font-size: 0.74rem;
+font-weight: 800;
 letter-spacing: 0.08em;
 text-transform: uppercase;
-opacity: 0.75;
-line-height: 1;
-margin-bottom: 0.15rem;
+opacity: 0.82;
+line-height: 1.1;
+margin-bottom: 0.2rem;
 }
 
 .btn-value {
-display: block;
-font-size: 1rem;
+font-size: 0.98rem;
 font-weight: 800;
-line-height: 1;
+line-height: 1.25;
+word-break: break-word;
 }
 
-/* ── COMFORT BAR ── */
+.btn-email .btn-value {
+color: #ffffff;
+}
+
+.btn-phone .btn-value {
+color: var(--text-dark);
+}
+
+.hero-reassurance {
+margin-top: 1.4rem;
+font-size: 0.95rem;
+color: var(--text-soft);
+font-weight: 700;
+}
+
 .comfort-bar {
-background: var(--soft-cream);
+background: rgba(245, 240, 232, 0.92);
 border-top: 1.5px solid var(--border);
 border-bottom: 1.5px solid var(--border);
-padding: 1.6rem 5vw;
+padding: 1.35rem 5vw;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-gap: 1.5rem 3.5rem;
+gap: 1rem 2.5rem;
 }
 
 .comfort-item {
 display: flex;
 align-items: center;
-gap: 0.5rem;
-font-size: 0.97rem;
+gap: 0.55rem;
+font-size: 0.96rem;
 font-weight: 700;
 color: var(--text-mid);
 }
 
-/* ── SECTIONS ── */
-section { padding: 4.5rem 5vw; }
-section + section { border-top: 2px solid var(--border); }
+.comfort-item span:first-child {
+color: var(--green);
+}
+
+section {
+padding: 4.5rem 5vw;
+}
 
 .label {
 display: inline-block;
@@ -236,188 +343,18 @@ margin-bottom: 0.8rem;
 font-size: 1.05rem;
 color: var(--text-mid);
 max-width: 58ch;
-margin-bottom: 2.8rem;
-}
-
-/* ── WHO THIS IS FOR ── */
-#who { background: var(--green-pale); }
-
-.who-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-gap: 1.2rem;
-}
-
-.who-card {
-background: var(--card-bg);
-border: 1.5px solid var(--green-border);
-border-radius: var(--radius);
-padding: 1.6rem 1.5rem;
-font-size: 1rem;
-color: var(--text-mid);
-line-height: 1.65;
-}
-
-.who-card strong {
-display: block;
-font-size: 1.05rem;
-color: var(--text-dark);
-margin-bottom: 0.3rem;
-font-weight: 800;
-}
-
-/* ── SERVICES ── */
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-gap: 1.3rem;
-}
-
-.service-card {
-background: var(--card-bg);
-border: 1.5px solid var(--border);
-border-radius: var(--radius);
-padding: 1.8rem 1.6rem;
-box-shadow: var(--shadow);
-}
-
-.s-icon {
-font-size: 1.9rem;
-margin-bottom: 0.8rem;
-display: block;
-}
-
-.service-card h3 {
-font-family: 'Lora', serif;
-font-size: 1.15rem;
-font-weight: 600;
-color: var(--text-dark);
-margin-bottom: 0.4rem;
-}
-
-.service-card p {
-font-size: 0.96rem;
-color: var(--text-soft);
-line-height: 1.7;
-}
-
-/* ── HOW IT WORKS ── */
-#how { background: var(--soft-cream); }
-
-.steps { display: flex; flex-direction: column; gap: 1.1rem; max-width: 720px; }
-
-.step {
-background: var(--card-bg);
-border: 1.5px solid var(--border);
-border-radius: var(--radius);
-padding: 1.6rem 1.8rem;
-display: grid;
-grid-template-columns: 52px 1fr;
-gap: 1.3rem;
-align-items: start;
-box-shadow: var(--shadow);
-}
-
-.step-num {
-width: 52px;
-height: 52px;
-border-radius: 50%;
-background: var(--gold-pale);
-border: 2px solid #DFC878;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: 'Lora', serif;
-font-size: 1.25rem;
-font-weight: 600;
-color: var(--gold);
-flex-shrink: 0;
-}
-
-.step h3 {
-font-family: 'Lora', serif;
-font-size: 1.1rem;
-font-weight: 600;
-color: var(--text-dark);
-margin-bottom: 0.3rem;
-}
-
-.step p { font-size: 0.96rem; color: var(--text-soft); }
-
-/* ── CONTACT ── */
-.contact-wrapper { max-width: 660px; }
-
-.contact-note {
-background: var(--green-pale);
-border: 1.5px solid var(--green-border);
-border-radius: var(--radius);
-padding: 1.4rem 1.6rem;
-font-size: 1rem;
-font-weight: 700;
-color: var(--green);
-line-height: 1.65;
 margin-bottom: 2rem;
 }
 
-.contact-note em { font-style: italic; font-weight: 400; }
-
-.contact-cards { display: flex; flex-direction: column; gap: 1.1rem; }
-
-.contact-card {
-background: var(--card-bg);
-border: 2px solid var(--border);
-border-radius: var(--radius);
-padding: 1.6rem 1.8rem;
-display: flex;
-align-items: center;
-gap: 1.4rem;
-text-decoration: none;
-box-shadow: var(--shadow);
+.contact-wrapper {
+max-width: 720px;
+margin: 0 auto;
 }
 
-.cc-icon {
-width: 54px;
-height: 54px;
-border-radius: 50%;
-background: var(--gold-pale);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.7rem;
-flex-shrink: 0;
-}
-
-.cc-text { flex: 1; }
-
-.cc-label {
-font-size: 0.75rem;
-font-weight: 800;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: var(--text-soft);
-margin-bottom: 0.2rem;
-}
-
-.cc-action {
-font-size: 1rem;
-font-weight: 800;
-color: var(--green);
-}
-
-.cc-value {
-font-size: 1.05rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-top: 0.1rem;
-}
-
-.cc-arrow { font-size: 1.4rem; color: var(--text-soft); margin-left: auto; }
-
-/* ── FOOTER ── */
 footer {
 background: var(--soft-cream);
-border-top: 2px solid var(--border);
-padding: 2.2rem 5vw;
+border-top: 1.5px solid var(--border);
+padding: 2rem 5vw;
 text-align: center;
 }
 
@@ -426,240 +363,105 @@ font-family: 'Lora', serif;
 font-size: 1.05rem;
 font-weight: 600;
 color: var(--text-dark);
-margin-bottom: 0.3rem;
+margin-bottom: 0.25rem;
 }
 
-.footer-name span { color: var(--gold); }
-
-footer p { font-size: 0.85rem; color: var(--text-soft); }
-
-/* ── MOBILE ── */
-@media (max-width: 580px) {
-body { font-size: 17px; }
-header { padding: 3rem 5vw 2.8rem; }
-section { padding: 3rem 5vw; }
-.step { grid-template-columns: 44px 1fr; gap: 1rem; }
-.contact-card { flex-wrap: wrap; }
-.cc-arrow { display: none; }
+footer p {
+font-size: 0.88rem;
+color: var(--text-soft);
 }
-```
 
+@media (max-width: 700px) {
+body {
+font-size: 17px;
+}
+
+header {
+padding: 3.4rem 5vw 3rem;
+}
+
+.btn-email,
+.btn-phone {
+width: 100%;
+min-width: 0;
+}
+
+nav {
+gap: 1rem;
+}
+
+.nav-brand {
+font-size: 0.95rem;
+}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-
 <nav>
-<div class="nav-brand">Capture Corp <span>·</span> Operation Tech</div>
+<div class="nav-brand">Capture Corporation Tech</div>
 <a class="nav-contact" href="#contact">Contact Us</a>
 </nav>
 
-<!-- HERO -->
-
 <header>
+<div class="hero-inner">
 <div class="hero-tag">Real Help from a Real Person</div>
 
 <h1>Friendly Tech Help for <em>Everyday People</em></h1>
 
 <p class="hero-sub">
-You don't need to be a tech expert. You just need someone patient, clear, and kind — who will meet you exactly where you are.
+Clear support. Calm guidance. No pressure, no judgment, and no talking over your head.
 </p>
 
 <div class="hero-promise">
-<span class="tick">✔</span> Whether you haven't touched a computer in years, or you just need a little guidance getting started — you are in the right place. No judgment. Ever.
+<span class="tick">&#10004;</span>
+Whether you have not touched a computer in years, or you are just stuck on one frustrating step, we help you slow it down, make sense of it, and move forward with confidence.
 </div>
 
 <div class="cta-group">
 <a class="btn-email" href="mailto:capture.corporation.tech@gmail.com">
-<span>✉️</span>
-<span>
+<span class="btn-icon">&#9993;</span>
+<span class="btn-copy">
 <span class="btn-label">Send Us an Email</span>
 <span class="btn-value">capture.corporation.tech@gmail.com</span>
 </span>
 </a>
+
 <a class="btn-phone" href="tel:+16096080083">
-<span>📞</span>
-<span>
+<span class="btn-icon">&#128222;</span>
+<span class="btn-copy">
 <span class="btn-label">Call or Text Us</span>
 <span class="btn-value">(609) 608-0083</span>
 </span>
 </a>
 </div>
+
+<div class="hero-reassurance">
+We explain things in plain English and work at your pace.
+</div>
+</div>
 </header>
 
-<!-- COMFORT BAR -->
-
 <div class="comfort-bar">
-<div class="comfort-item">😌 No pressure, no rush</div>
-<div class="comfort-item">🔒 Safe and confidential</div>
-<div class="comfort-item">💬 Plain English, always</div>
-<div class="comfort-item">🏠 You stay right at home</div>
-<div class="comfort-item">🤝 One real person helping you</div>
+<div class="comfort-item"><span>&#10004;</span><span>Patient, step-by-step help</span></div>
+<div class="comfort-item"><span>&#10004;</span><span>Clear answers without pressure</span></div>
+<div class="comfort-item"><span>&#10004;</span><span>Comfortable support for beginners</span></div>
+<div class="comfort-item"><span>&#10004;</span><span>Tech help that feels human</span></div>
 </div>
-
-<!-- WHO THIS IS FOR -->
-
-<section id="who">
-<span class="label">Who We Serve</span>
-<h2>This Is for You If...</h2>
-<p class="intro">You don't have to know what's wrong or what to call it. If any of these sound like you, we can help.</p>
-
-<div class="who-grid">
-<div class="who-card">
-<strong>You feel embarrassed asking for help</strong>
-There's nothing embarrassing about it. Everyone starts somewhere. We've helped people at every level — and we never make you feel small.
-</div>
-<div class="who-card">
-<strong>You haven't used a computer much lately</strong>
-Maybe life got busy, or things changed. We'll meet you where you are and get you comfortable again at your own pace.
-</div>
-<div class="who-card">
-<strong>You're not sure where to even begin</strong>
-That's fine — just reach out. You don't need to explain it perfectly. We'll ask a few simple questions and take it from there.
-</div>
-<div class="who-card">
-<strong>You've tried YouTube and still feel lost</strong>
-Videos can't answer your specific question. We can. One live session is worth hours of searching on your own.
-</div>
-<div class="who-card">
-<strong>You want to learn, not just be handed the answer</strong>
-We explain as we go. By the end of a session, you'll understand what we did and why — so you feel more confident next time.
-</div>
-<div class="who-card">
-<strong>You're nervous about reaching out online</strong>
-That's exactly why our contact info is right at the top of this page. A short email or a quick call is all it takes. We do the rest.
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-<span class="label">What We Help With</span>
-<h2>Our Services</h2>
-<p class="intro">From basic questions to bigger problems — if it involves a computer, a phone, or a device, we can help you figure it out.</p>
-
-<div class="services-grid">
-<div class="service-card">
-<span class="s-icon">🤖</span>
-<h3>AI Tools and Setup</h3>
-<p>Curious about AI but not sure where to start? We'll show you what it can do for you — step by step, in plain language, no tech background needed.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">🖥️</span>
-<h3>Computer Troubleshooting</h3>
-<p>Slow, frozen, crashing, or just acting strange? We'll look at it together over Zoom and get it working again — no need to take it anywhere.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">📄</span>
-<h3>Microsoft Office Help</h3>
-<p>Word, Excel, PowerPoint, Outlook — we guide you through it at your speed. No rushing, no confusing shortcuts you didn't ask for.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">✍️</span>
-<h3>Document Drafting</h3>
-<p>Need a letter, form, or proposal written up? We'll put it together cleanly and professionally — ready to print, send, or submit.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">🖨️</span>
-<h3>Printer and Device Setup</h3>
-<p>Printers are notoriously frustrating. We'll connect it, test it, and make sure it works — walking you through every step so you know what to do next time.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">📶</span>
-<h3>Wi-Fi and Internet Help</h3>
-<p>Slow connection, devices dropping off, or nothing connecting at all — we'll troubleshoot it with you and get you back online.</p>
-</div>
-</div>
-</section>
-
-<!-- HOW IT WORKS -->
-
-<section id="how">
-<span class="label">The Process</span>
-<h2>Here's Exactly What Happens</h2>
-<p class="intro">Simple steps. No forms, no confusion, no surprises. This is all it takes:</p>
-
-<div class="steps">
-<div class="step">
-<div class="step-num">1</div>
-<div>
-<h3>You Reach Out</h3>
-<p>Send a short email or give us a call. A sentence or two is plenty — just tell us what's going on. You don't need to know the technical name for it. We'll figure it out together.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-num">2</div>
-<div>
-<h3>We Pick a Time That Works for You</h3>
-<p>We'll schedule a Zoom session at a day and time that fits your life. You stay right where you are — at home, comfortable, no travel needed.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-num">3</div>
-<div>
-<h3>We Work Through It Together, at Your Pace</h3>
-<p>Ask questions any time. Nothing is too basic or too small. We don't move on until you feel good. You'll finish the session knowing what happened and why.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-num">4</div>
-<div>
-<h3>Payment Is Handled Simply and Directly</h3>
-<p>We talk through payment with you after your session. No surprises, no complicated checkout. We work with your situation.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
 
 <section id="contact">
-<span class="label">Get In Touch</span>
-<h2>We'd Love to Hear from You</h2>
-<p class="intro">There is no wrong way to reach out. You don't need the perfect words. Just contact us — we'll handle the rest.</p>
-
 <div class="contact-wrapper">
-
-```
-<div class="contact-note">
-💛 Not sure what to write? Try this: <em>"Hi, I need some help with my computer."</em> That is enough. We will take it from there — no pressure, no judgment.
-</div>
-
-<div class="contact-cards">
-
-<a class="contact-card" href="mailto:capture.corporation.tech@gmail.com">
-<div class="cc-icon">✉️</div>
-<div class="cc-text">
-<div class="cc-label">Send Us an Email</div>
-<div class="cc-action">Click here to email us now</div>
-<div class="cc-value">capture.corporation.tech@gmail.com</div>
-</div>
-<div class="cc-arrow">→</div>
-</a>
-
-<a class="contact-card" href="tel:+16096080083">
-<div class="cc-icon">📞</div>
-<div class="cc-text">
-<div class="cc-label">Call or Text</div>
-<div class="cc-action">Click here to call us now</div>
-<div class="cc-value">(609) 608-0083</div>
-</div>
-<div class="cc-arrow">→</div>
-</a>
-
-</div>
-```
-
+<div class="label">Contact</div>
+<h2>Reach Out Without the Stress</h2>
+<p class="intro">
+If something on your phone, computer, app, email, or online account has you feeling stuck, reach out. We are here to make the next step feel easier, not harder.
+</p>
 </div>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-<div class="footer-name">Capture Corp <span>·</span> Operation Tech</div>
-<p>Baltimore, MD &nbsp;·&nbsp; Virtual Sessions Available Nationwide &nbsp;·&nbsp; &copy; 2025</p>
+<div class="footer-name">Capture Corporation Tech</div>
+<p>Friendly tech help for everyday people.</p>
 </footer>
 
 </body>

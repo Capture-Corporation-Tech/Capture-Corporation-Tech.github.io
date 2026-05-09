@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -9,7 +8,6 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-```
 :root {
 --warm-white: #FDFAF5;
 --soft-cream: #F5F0E8;
@@ -38,7 +36,7 @@ line-height: 1.75;
 overflow-x: hidden;
 }
 
-/* ── NAV ── */
+/* NAV */
 nav {
 background: var(--card-bg);
 border-bottom: 2px solid var(--border);
@@ -90,7 +88,18 @@ color: var(--text-dark);
 border: 1.5px solid #DFC878;
 }
 
-/* ── HERO ── */
+.nav-btn-pricing {
+background: transparent;
+color: var(--text-mid);
+border: 1.5px solid var(--border);
+}
+
+.nav-btn-pricing:hover {
+border-color: var(--gold);
+color: var(--gold);
+}
+
+/* HERO */
 header {
 background: linear-gradient(150deg, #FFFEF9 0%, #F6EFE0 100%);
 padding: 4.5rem 5vw 4rem;
@@ -147,7 +156,7 @@ line-height: 1.6;
 
 .tick { color: var(--green); margin-right: 0.4rem; }
 
-/* ── HERO BUTTONS ── */
+/* HERO BUTTONS */
 .cta-group {
 display: flex;
 flex-wrap: wrap;
@@ -206,7 +215,7 @@ font-weight: 800;
 line-height: 1;
 }
 
-/* ── COMFORT BAR ── */
+/* COMFORT BAR */
 .comfort-bar {
 background: var(--soft-cream);
 border-top: 1.5px solid var(--border);
@@ -227,7 +236,7 @@ font-weight: 700;
 color: var(--text-mid);
 }
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section { padding: 4.5rem 5vw; }
 section + section { border-top: 2px solid var(--border); }
 
@@ -257,7 +266,7 @@ max-width: 58ch;
 margin-bottom: 2.8rem;
 }
 
-/* ── WHO THIS IS FOR ── */
+/* WHO THIS IS FOR */
 #who { background: var(--green-pale); }
 
 .who-grid {
@@ -284,7 +293,7 @@ margin-bottom: 0.35rem;
 font-weight: 800;
 }
 
-/* ── SERVICES ── */
+/* SERVICES */
 .services-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
@@ -319,7 +328,7 @@ color: var(--text-soft);
 line-height: 1.7;
 }
 
-/* ── HOW IT WORKS ── */
+/* HOW IT WORKS */
 #how { background: var(--soft-cream); }
 
 .steps { display: flex; flex-direction: column; gap: 1.1rem; max-width: 720px; }
@@ -362,7 +371,7 @@ margin-bottom: 0.3rem;
 
 .step p { font-size: 0.96rem; color: var(--text-soft); }
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-wrapper { max-width: 660px; }
 
 .contact-note {
@@ -432,7 +441,40 @@ word-break: break-all;
 
 .cc-arrow { font-size: 1.3rem; color: var(--text-soft); margin-left: auto; flex-shrink: 0; }
 
-/* ── FOOTER ── */
+/* PRICING */
+.free-banner{background:var(--green-pale);border:1.5px solid var(--green-border);border-radius:var(--radius);padding:1.1rem 1.6rem;font-size:1rem;font-weight:700;color:var(--green);margin-bottom:2.5rem;max-width:620px;display:flex;align-items:center;gap:.7rem;}
+.free-banner .icon{font-size:1.4rem;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-bottom:2.5rem;}
+.price-card{background:var(--card-bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:1rem;position:relative;transition:transform .2s ease,box-shadow .2s ease;}
+.price-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(30,26,20,.13);}
+.price-card.featured{border:2px solid #DFC878;background:var(--gold-pale);}
+.featured-badge{position:absolute;top:-13px;left:1.6rem;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .9rem;border-radius:50px;}
+.price-icon{font-size:2rem;display:block;}
+.price-card h3{font-family:'Lora',serif;font-size:1.2rem;font-weight:600;color:var(--text-dark);line-height:1.3;}
+.price-amount{display:flex;align-items:baseline;gap:.3rem;}
+.price-amount .dollar{font-size:1.1rem;font-weight:800;color:var(--gold);align-self:flex-start;margin-top:.3rem;}
+.price-amount .number{font-family:'Lora',serif;font-size:2.8rem;font-weight:600;color:var(--text-dark);line-height:1;}
+.price-amount .per{font-size:.88rem;color:var(--text-soft);font-weight:700;}
+.price-desc{font-size:.95rem;color:var(--text-mid);line-height:1.65;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-top:.2rem;}
+.price-features li{font-size:.93rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:.5rem;line-height:1.55;}
+.price-features li::before{content:"✔";color:var(--green);font-size:.85rem;margin-top:.15rem;flex-shrink:0;}
+.price-cta{display:inline-block;margin-top:auto;padding:.75rem 1.4rem;border-radius:50px;font-weight:800;font-size:.95rem;text-decoration:none;text-align:center;background:var(--green);color:#fff;transition:opacity .2s;}
+.price-cta:hover{opacity:.88;}
+.price-card.featured .price-cta{background:var(--gold);}
+.org-card{background:var(--soft-cream);border:2px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:1.2rem 2rem;align-items:center;}
+.org-card h3{font-family:'Lora',serif;font-size:1.25rem;font-weight:600;color:var(--text-dark);margin-bottom:.4rem;}
+.org-card p{font-size:.96rem;color:var(--text-mid);line-height:1.65;max-width:60ch;}
+.org-price{text-align:center;flex-shrink:0;}
+.org-price .custom-label{font-family:'Lora',serif;font-size:1.6rem;font-weight:600;color:var(--gold);display:block;}
+.org-price .custom-sub{font-size:.82rem;color:var(--text-soft);font-weight:700;}
+.pricing-note{margin-top:2rem;font-size:.88rem;color:var(--text-soft);font-style:italic;max-width:58ch;line-height:1.7;}
+.social-bar{display:flex;justify-content:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap;}
+.social-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.2rem;border-radius:50px;font-weight:800;font-size:.88rem;text-decoration:none;border:2px solid var(--border);color:var(--text-dark);background:var(--card-bg);transition:border-color .2s,color .2s;}
+.social-btn:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:580px){.org-card{grid-template-columns:1fr;}.org-price{text-align:left;}}
+
+/* FOOTER */
 footer {
 background: var(--soft-cream);
 border-top: 2px solid var(--border);
@@ -450,7 +492,7 @@ margin-bottom: 0.3rem;
 
 footer p { font-size: 0.85rem; color: var(--text-soft); }
 
-/* ── MOBILE ── */
+/* MOBILE */
 @media (max-width: 600px) {
 body { font-size: 17px; }
 header { padding: 3rem 5vw 2.8rem; }
@@ -459,229 +501,289 @@ section { padding: 3rem 5vw; }
 .cc-arrow { display: none; }
 .nav-btn-email .btn-value { display: none; }
 }
-```
-
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-
 <nav>
-<div class="nav-brand">Capture Corporation Tech</div>
-<div class="nav-actions">
-<a class="nav-btn nav-btn-email" href="mailto:capture.corporation.tech@gmail.com">
-&#9993; Send Us an Email
-</a>
-<a class="nav-btn nav-btn-phone" href="tel:+16096080038">
-&#128222; (609) 608-0038
-</a>
-</div>
+  <div class="nav-brand">Capture Corporation Tech</div>
+  <div class="nav-actions">
+    <a class="nav-btn nav-btn-pricing" href="#pricing">Pricing</a>
+    <a class="nav-btn nav-btn-email" href="mailto:capture.corporation.tech@gmail.com">&#9993; Send Us an Email</a>
+    <a class="nav-btn nav-btn-phone" href="tel:+16096080038">&#128222; (609) 608-0038</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-
 <header>
-<div class="hero-tag">Real Help from a Real Person</div>
-
-<h1>Friendly Tech Help for <em>Everyday People</em></h1>
-
-<p class="hero-sub">
-You don't need to be a tech expert. You just need someone patient, clear, and kind who will meet you exactly where you are.
-</p>
-
-<div class="hero-promise">
-<span class="tick">&#10004;</span>
-Whether you haven't touched a computer in years, or you just need a little guidance getting started you are in the right place. No judgment. Ever.
-</div>
-
-<div class="cta-group">
-<a class="btn-email" href="mailto:capture.corporation.tech@gmail.com">
-<span class="btn-icon">&#9993;</span>
-<span>
-<span class="btn-label">Send Us an Email</span>
-<span class="btn-value">capture.corporation.tech@gmail.com</span>
-</span>
-</a>
-<a class="btn-phone" href="tel:+16096080038">
-<span class="btn-icon">&#128222;</span>
-<span>
-<span class="btn-label">Call or Text Us</span>
-<span class="btn-value">(609) 608-0038</span>
-</span>
-</a>
-</div>
+  <div class="hero-tag">Real Help from a Real Person</div>
+  <h1>Friendly Tech Help for <em>Everyday People</em></h1>
+  <p class="hero-sub">You don't need to be a tech expert. You just need someone patient, clear, and kind who will meet you exactly where you are.</p>
+  <div class="hero-promise">
+    <span class="tick">&#10004;</span>
+    Whether you haven't touched a computer in years, or you just need a little guidance getting started you are in the right place. No judgment. Ever.
+  </div>
+  <div class="cta-group">
+    <a class="btn-email" href="mailto:capture.corporation.tech@gmail.com">
+      <span class="btn-icon">&#9993;</span>
+      <span>
+        <span class="btn-label">Send Us an Email</span>
+        <span class="btn-value">capture.corporation.tech@gmail.com</span>
+      </span>
+    </a>
+    <a class="btn-phone" href="tel:+16096080038">
+      <span class="btn-icon">&#128222;</span>
+      <span>
+        <span class="btn-label">Call or Text Us</span>
+        <span class="btn-value">(609) 608-0038</span>
+      </span>
+    </a>
+  </div>
 </header>
 
 <!-- COMFORT BAR -->
-
 <div class="comfort-bar">
-<div class="comfort-item">&#128522; No pressure, no rush</div>
-<div class="comfort-item">&#128274; Safe and confidential</div>
-<div class="comfort-item">&#128172; Plain English, always</div>
-<div class="comfort-item">&#127968; You stay right at home</div>
-<div class="comfort-item">&#129309; One real person helping you</div>
+  <div class="comfort-item">&#128522; No pressure, no rush</div>
+  <div class="comfort-item">&#128274; Safe and confidential</div>
+  <div class="comfort-item">&#128172; Plain English, always</div>
+  <div class="comfort-item">&#127968; You stay right at home</div>
+  <div class="comfort-item">&#129309; One real person helping you</div>
 </div>
 
 <!-- WHO THIS IS FOR -->
-
 <section id="who">
-<span class="label">Who We Serve</span>
-<h2>This Is for You If...</h2>
-<p class="intro">You don't have to know what's wrong or what to call it. If any of these sound like you, we can help.</p>
-
-<div class="who-grid">
-<div class="who-card">
-<strong>You feel embarrassed asking for help</strong>
-There is nothing embarrassing about it. Everyone starts somewhere. We have helped people at every level and we never make you feel small.
-</div>
-<div class="who-card">
-<strong>You haven't used a computer much lately</strong>
-Maybe life got busy or things changed. We will meet you where you are and get you comfortable again, at your own pace.
-</div>
-<div class="who-card">
-<strong>You're not sure where to even begin</strong>
-That is perfectly fine. Just reach out. You don't need to explain it perfectly. We will ask a few simple questions and take it from there.
-</div>
-<div class="who-card">
-<strong>You've tried YouTube and still feel lost</strong>
-Videos can't answer your specific question. We can. One live session is worth hours of searching on your own.
-</div>
-<div class="who-card">
-<strong>You want to understand, not just be shown</strong>
-We explain as we go. By the end of a session you will know what we did and why so you feel more confident next time.
-</div>
-<div class="who-card">
-<strong>You're nervous about reaching out online</strong>
-That is exactly why our contact information is right at the top of this page. A short email or a quick call is all it takes. We handle the rest.
-</div>
-</div>
+  <span class="label">Who We Serve</span>
+  <h2>This Is for You If...</h2>
+  <p class="intro">You don't have to know what's wrong or what to call it. If any of these sound like you, we can help.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <strong>You feel embarrassed asking for help</strong>
+      There is nothing embarrassing about it. Everyone starts somewhere. We have helped people at every level and we never make you feel small.
+    </div>
+    <div class="who-card">
+      <strong>You haven't used a computer much lately</strong>
+      Maybe life got busy or things changed. We will meet you where you are and get you comfortable again, at your own pace.
+    </div>
+    <div class="who-card">
+      <strong>You're not sure where to even begin</strong>
+      That is perfectly fine. Just reach out. You don't need to explain it perfectly. We will ask a few simple questions and take it from there.
+    </div>
+    <div class="who-card">
+      <strong>You've tried YouTube and still feel lost</strong>
+      Videos can't answer your specific question. We can. One live session is worth hours of searching on your own.
+    </div>
+    <div class="who-card">
+      <strong>You want to understand, not just be shown</strong>
+      We explain as we go. By the end of a session you will know what we did and why so you feel more confident next time.
+    </div>
+    <div class="who-card">
+      <strong>You're nervous about reaching out online</strong>
+      That is exactly why our contact information is right at the top of this page. A short email or a quick call is all it takes. We handle the rest.
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services">
-<span class="label">What We Help With</span>
-<h2>Our Services</h2>
-<p class="intro">From basic questions to bigger problems if it involves a computer, a phone, or a device, we can help you work through it.</p>
-
-<div class="services-grid">
-<div class="service-card">
-<span class="s-icon">&#129302;</span>
-<h3>AI Tools and Setup</h3>
-<p>Curious about AI but not sure where to start? We will show you what it can do for you step by step, in plain language, no tech background needed.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">&#128187;</span>
-<h3>Computer Troubleshooting</h3>
-<p>Slow, frozen, crashing, or just acting strange? We will look at it together over Zoom and get it working again no need to take it anywhere.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">&#128196;</span>
-<h3>Microsoft Office Help</h3>
-<p>Word, Excel, PowerPoint, Outlook we guide you through it at your speed. No rushing, no confusing shortcuts you didn't ask for.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">&#9999;</span>
-<h3>Document Drafting</h3>
-<p>Need a letter, form, or proposal written up? We will put it together cleanly and professionally ready to print, send, or submit.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">&#128424;</span>
-<h3>Printer and Device Setup</h3>
-<p>Printers are notoriously frustrating. We will connect it, test it, and make sure it works walking you through every step.</p>
-</div>
-<div class="service-card">
-<span class="s-icon">&#128225;</span>
-<h3>Wi-Fi and Internet Help</h3>
-<p>Slow connection, devices dropping off, or nothing connecting at all we will troubleshoot it with you and get you back online.</p>
-</div>
-</div>
+  <span class="label">What We Help With</span>
+  <h2>Our Services</h2>
+  <p class="intro">From basic questions to bigger problems if it involves a computer, a phone, or a device, we can help you work through it.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="s-icon">&#129302;</span>
+      <h3>AI Tools and Setup</h3>
+      <p>Curious about AI but not sure where to start? We will show you what it can do for you step by step, in plain language, no tech background needed.</p>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">&#128187;</span>
+      <h3>Computer Troubleshooting</h3>
+      <p>Slow, frozen, crashing, or just acting strange? We will look at it together over Zoom and get it working again no need to take it anywhere.</p>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">&#128196;</span>
+      <h3>Microsoft Office Help</h3>
+      <p>Word, Excel, PowerPoint, Outlook we guide you through it at your speed. No rushing, no confusing shortcuts you didn't ask for.</p>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">&#9999;</span>
+      <h3>Document Drafting</h3>
+      <p>Need a letter, form, or proposal written up? We will put it together cleanly and professionally ready to print, send, or submit.</p>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">&#128424;</span>
+      <h3>Printer and Device Setup</h3>
+      <p>Printers are notoriously frustrating. We will connect it, test it, and make sure it works walking you through every step.</p>
+    </div>
+    <div class="service-card">
+      <span class="s-icon">&#128225;</span>
+      <h3>Wi-Fi and Internet Help</h3>
+      <p>Slow connection, devices dropping off, or nothing connecting at all we will troubleshoot it with you and get you back online.</p>
+    </div>
+  </div>
 </section>
 
 <!-- HOW IT WORKS -->
-
 <section id="how">
-<span class="label">The Process</span>
-<h2>Here's Exactly What Happens</h2>
-<p class="intro">Simple steps. No forms, no confusion, no surprises. This is all it takes:</p>
+  <span class="label">The Process</span>
+  <h2>Here's Exactly What Happens</h2>
+  <p class="intro">Simple steps. No forms, no confusion, no surprises. This is all it takes:</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>You Reach Out</h3>
+        <p>Send a short email or give us a call. A sentence or two is plenty. Just tell us what is going on you do not need to know the technical name for it. We will figure it out together.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>We Pick a Time That Works for You</h3>
+        <p>We will schedule a Zoom session at a day and time that fits your life. You stay right where you are at home, comfortable, no travel needed.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>We Work Through It Together at Your Pace</h3>
+        <p>Ask questions any time. Nothing is too basic. We do not move on until you feel good. You will finish the session knowing what happened and why.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <h3>Payment Is Handled Simply and Directly</h3>
+        <p>We talk through payment with you after your session. No surprises, no complicated checkout. We work with your situation.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="steps">
-<div class="step">
-<div class="step-num">1</div>
-<div>
-<h3>You Reach Out</h3>
-<p>Send a short email or give us a call. A sentence or two is plenty. Just tell us what is going on you do not need to know the technical name for it. We will figure it out together.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-num">2</div>
-<div>
-<h3>We Pick a Time That Works for You</h3>
-<p>We will schedule a Zoom session at a day and time that fits your life. You stay right where you are at home, comfortable, no travel needed.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-num">3</div>
-<div>
-<h3>We Work Through It Together at Your Pace</h3>
-<p>Ask questions any time. Nothing is too basic. We do not move on until you feel good. You will finish the session knowing what happened and why.</p>
-</div>
-</div>
-<div class="step">
-<div class="step-num">4</div>
-<div>
-<h3>Payment Is Handled Simply and Directly</h3>
-<p>We talk through payment with you after your session. No surprises, no complicated checkout. We work with your situation.</p>
-</div>
-</div>
-</div>
+<!-- PRICING -->
+<section id="pricing">
+  <span class="label">Simple, Honest Pricing</span>
+  <h2>Services &amp; Rates</h2>
+  <p class="intro">No hidden fees. No confusing packages. Just clear, fair pricing for real help delivered right to your screen over Zoom.</p>
+
+  <div class="free-banner">
+    <span class="icon">🎁</span>
+    <span>Your <strong>free 20-minute introductory consultation is for new clients only</strong> — no commitment, no pressure. Just a chance to talk and see if we're a good fit.</span>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <span class="price-icon">💻</span>
+      <h3>Single Session</h3>
+      <div class="price-amount">
+        <span class="dollar">$</span>
+        <span class="number">45</span>
+        <span class="per">/ session</span>
+      </div>
+      <p class="price-desc">One focused Zoom session to tackle whatever you need help with right now.</p>
+      <ul class="price-features">
+        <li>Up to 40 minutes via Zoom</li>
+        <li>Screen sharing included</li>
+        <li>Follow-up email summary</li>
+        <li>No subscription required</li>
+      </ul>
+      <a class="price-cta" href="mailto:capture.corporation.tech@gmail.com?subject=Single Session Inquiry">Book a Session</a>
+    </div>
+
+    <div class="price-card featured">
+      <div class="featured-badge">Most Popular</div>
+      <span class="price-icon">📅</span>
+      <h3>Monthly Support Plan</h3>
+      <div class="price-amount">
+        <span class="dollar">$</span>
+        <span class="number">120</span>
+        <span class="per">/ month</span>
+      </div>
+      <p class="price-desc">Ongoing support so you always have someone to call when something isn't working.</p>
+      <ul class="price-features">
+        <li>Four 40-minute sessions per month</li>
+        <li>Priority scheduling</li>
+        <li>Email support between sessions</li>
+        <li>Progress tracking included</li>
+        <li>Cancel anytime</li>
+      </ul>
+      <a class="price-cta" href="mailto:capture.corporation.tech@gmail.com?subject=Monthly Plan Inquiry">Get Started</a>
+    </div>
+
+    <div class="price-card">
+      <span class="price-icon">🎓</span>
+      <h3>Digital Literacy Bundle</h3>
+      <div class="price-amount">
+        <span class="dollar">$</span>
+        <span class="number">75</span>
+        <span class="per">/ session</span>
+      </div>
+      <p class="price-desc">Structured learning sessions designed to build real confidence with technology step by step.</p>
+      <ul class="price-features">
+        <li>Customized lesson plan</li>
+        <li>Covers email, browsing, apps &amp; more</li>
+        <li>Printed or emailed reference guides</li>
+        <li>Move at your own pace</li>
+      </ul>
+      <a class="price-cta" href="mailto:capture.corporation.tech@gmail.com?subject=Digital Literacy Bundle Inquiry">Learn More</a>
+    </div>
+  </div>
+
+  <div class="org-card">
+    <div>
+      <h3>🏢 Organizations, Churches &amp; Community Groups</h3>
+      <p>Training programs, digital literacy workshops, and ongoing tech support designed for groups and nonprofits. Flexible scheduling and volume pricing available. Let's talk about what your community needs.</p>
+    </div>
+    <div class="org-price">
+      <span class="custom-label">Custom</span>
+      <span class="custom-sub">Contact for quote</span>
+    </div>
+  </div>
+
+  <p class="pricing-note">* All sessions conducted via Zoom (40 minutes per session on free tier). Payment accepted through major cards and digital wallets. Sessions may be rescheduled with 24 hours notice.</p>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-<span class="label">Get In Touch</span>
-<h2>We'd Love to Hear from You</h2>
-<p class="intro">There is no wrong way to reach out. You do not need the perfect words. Just contact us and we will handle the rest.</p>
-
-<div class="contact-wrapper">
-<div class="contact-note">
-&#128155; Not sure what to write? Try this: <em>"Hi, I need some help with my computer."</em> That is enough. We will take it from there no pressure, no judgment.
-</div>
-
-```
-<div class="contact-cards">
-<a class="contact-card" href="mailto:capture.corporation.tech@gmail.com">
-<div class="cc-icon">&#9993;</div>
-<div class="cc-text">
-<div class="cc-label">Send Us an Email</div>
-<div class="cc-action">Click here to email us now</div>
-<div class="cc-value">capture.corporation.tech@gmail.com</div>
-</div>
-<div class="cc-arrow">&#8594;</div>
-</a>
-
-<a class="contact-card" href="tel:+16096080038">
-<div class="cc-icon">&#128222;</div>
-<div class="cc-text">
-<div class="cc-label">Call or Text</div>
-<div class="cc-action">Click here to call us now</div>
-<div class="cc-value">(609) 608-0038</div>
-</div>
-<div class="cc-arrow">&#8594;</div>
-</a>
-</div>
-```
-
-</div>
+  <span class="label">Get In Touch</span>
+  <h2>We'd Love to Hear from You</h2>
+  <p class="intro">There is no wrong way to reach out. You do not need the perfect words. Just contact us and we will handle the rest.</p>
+  <div class="contact-wrapper">
+    <div class="contact-note">
+      &#128155; Not sure what to write? Try this: <em>"Hi, I need some help with my computer."</em> That is enough. We will take it from there no pressure, no judgment.
+    </div>
+    <div class="contact-cards">
+      <a class="contact-card" href="mailto:capture.corporation.tech@gmail.com">
+        <div class="cc-icon">&#9993;</div>
+        <div class="cc-text">
+          <div class="cc-label">Send Us an Email</div>
+          <div class="cc-action">Click here to email us now</div>
+          <div class="cc-value">capture.corporation.tech@gmail.com</div>
+        </div>
+        <div class="cc-arrow">&#8594;</div>
+      </a>
+      <a class="contact-card" href="tel:+16096080038">
+        <div class="cc-icon">&#128222;</div>
+        <div class="cc-text">
+          <div class="cc-label">Call or Text</div>
+          <div class="cc-action">Click here to call us now</div>
+          <div class="cc-value">(609) 608-0038</div>
+        </div>
+        <div class="cc-arrow">&#8594;</div>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-<div class="footer-name">Capture Corporation Tech</div>
-<p>Baltimore, MD &nbsp;&middot;&nbsp; Virtual Sessions Available Nationwide &nbsp;&middot;&nbsp; &copy; 2026</p>
+  <div class="social-bar">
+    <a class="social-btn" href="https://www.facebook.com/profile.php?id=61576849937900" target="_blank">📘 Facebook</a>
+    <a class="social-btn" href="https://www.instagram.com/capturecorporationtech" target="_blank">📸 Instagram</a>
+  </div>
+  <div class="footer-name">Capture Corporation Tech</div>
+  <p>Baltimore, MD &nbsp;&middot;&nbsp; Virtual Sessions Available Nationwide &nbsp;&middot;&nbsp; &copy; 2026</p>
+  <p style="margin-top:0.4rem;">&#128222; (609) 608-0038 &nbsp;&middot;&nbsp; &#9993; capture.corporation.tech@gmail.com</p>
 </footer>
 
 </body>

@@ -7,499 +7,148 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
---warm-white: #FDFAF5;
---soft-cream: #F5F0E8;
---card-bg: #FFFFFF;
---gold: #9A6F00;
---gold-pale: #FFF8E7;
---text-dark: #1E1A14;
---text-mid: #4A3F2F;
---text-soft: #6B6050;
---border: #E2D8C4;
---green: #3D6B4A;
---green-pale: #ECF4EF;
---green-border: #B8D4C0;
---radius: 14px;
---shadow: 0 3px 18px rgba(30,26,20,0.09);
+--warm-white: #FDFAF5; --soft-cream: #F5F0E8; --card-bg: #FFFFFF;
+--gold: #9A6F00; --gold-pale: #FFF8E7; --text-dark: #1E1A14;
+--text-mid: #4A3F2F; --text-soft: #6B6050; --border: #E2D8C4;
+--green: #3D6B4A; --green-pale: #ECF4EF; --green-border: #B8D4C0;
+--radius: 14px; --shadow: 0 3px 18px rgba(30,26,20,0.09);
 }
-
 html { scroll-behavior: smooth; }
-
-body {
-background: var(--warm-white);
-color: var(--text-dark);
-font-family: 'Nunito', sans-serif;
-font-size: 19px;
-line-height: 1.75;
-overflow-x: hidden;
-}
+body { background: var(--warm-white); color: var(--text-dark); font-family: 'Nunito', sans-serif; font-size: 19px; line-height: 1.75; overflow-x: hidden; }
 
 /* NAV */
-nav {
-background: var(--card-bg);
-border-bottom: 2px solid var(--border);
-padding: 0.9rem 5vw;
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 1rem;
-position: sticky;
-top: 0;
-z-index: 100;
-flex-wrap: wrap;
-}
-
-.nav-brand {
-font-size: 1.05rem;
-font-weight: 800;
-color: var(--text-dark);
-}
-
-.nav-actions {
-display: flex;
-align-items: center;
-gap: 0.75rem;
-flex-wrap: wrap;
-}
-
-.nav-btn {
-display: inline-flex;
-align-items: center;
-gap: 0.4rem;
-font-family: 'Nunito', sans-serif;
-font-weight: 800;
-font-size: 0.88rem;
-text-decoration: none;
-padding: 0.5rem 1.1rem;
-border-radius: 50px;
-white-space: nowrap;
-}
-
-.nav-btn-email {
-background: var(--green);
-color: var(--text-dark);
-}
-
-.nav-btn-phone {
-background: var(--gold-pale);
-color: var(--text-dark);
-border: 1.5px solid #DFC878;
-}
-
-.nav-btn-pricing {
-background: transparent;
-color: var(--text-mid);
-border: 1.5px solid var(--border);
-}
-
-.nav-btn-pricing:hover {
-border-color: var(--gold);
-color: var(--gold);
-}
+nav { background: var(--card-bg); border-bottom: 2px solid var(--border); padding: 0.9rem 5vw; display: flex; justify-content: space-between; align-items: center; gap: 1rem; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+.nav-brand { font-size: 1.05rem; font-weight: 800; color: var(--text-dark); }
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.nav-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 50px; white-space: nowrap; min-height: 44px; }
+.nav-btn-email { background: var(--green); color: #ffffff; }
+.nav-btn-phone { background: var(--gold-pale); color: var(--text-dark); border: 1.5px solid #DFC878; }
+.nav-btn-pricing { background: transparent; color: var(--text-mid); border: 1.5px solid var(--border); }
+.nav-btn-pricing:hover { border-color: var(--gold); color: var(--gold); }
 
 /* HERO */
-header {
-background: linear-gradient(150deg, #FFFEF9 0%, #F6EFE0 100%);
-padding: 4.5rem 5vw 4rem;
-text-align: center;
-border-bottom: 2px solid var(--border);
-}
-
-.hero-tag {
-display: inline-block;
-background: var(--green-pale);
-color: var(--green);
-font-weight: 800;
-font-size: 0.88rem;
-padding: 0.4rem 1.1rem;
-border-radius: 50px;
-border: 1.5px solid var(--green-border);
-margin-bottom: 1.6rem;
-}
-
-h1 {
-font-family: 'Lora', serif;
-font-size: clamp(2rem, 5.5vw, 3.6rem);
-font-weight: 600;
-color: var(--text-dark);
-line-height: 1.2;
-max-width: 20ch;
-margin: 0 auto 1.1rem;
-}
-
+header { background: linear-gradient(150deg, #FFFEF9 0%, #F6EFE0 100%); padding: 4.5rem 5vw 0; text-align: center; border-bottom: 2px solid var(--border); }
+.hero-tag { display: inline-block; background: var(--green-pale); color: var(--green); font-weight: 800; font-size: 0.92rem; padding: 0.4rem 1.1rem; border-radius: 50px; border: 1.5px solid var(--green-border); margin-bottom: 1.6rem; }
+h1 { font-family: 'Lora', serif; font-size: clamp(2.2rem, 5.5vw, 3.6rem); font-weight: 600; color: var(--text-dark); line-height: 1.2; max-width: 20ch; margin: 0 auto 1.1rem; }
 h1 em { font-style: italic; color: var(--gold); }
-
-.hero-sub {
-font-family: 'Lora', serif;
-font-style: italic;
-font-size: 1.12rem;
-color: var(--text-mid);
-max-width: 50ch;
-margin: 0 auto 2rem;
-}
-
-.hero-promise {
-display: inline-block;
-background: var(--gold-pale);
-border: 1.5px solid #DFC878;
-border-radius: 12px;
-padding: 1rem 1.8rem;
-font-size: 1.05rem;
-font-weight: 700;
-color: var(--text-mid);
-margin-bottom: 2.5rem;
-max-width: 54ch;
-line-height: 1.6;
-}
-
+.hero-sub { font-family: 'Lora', serif; font-style: italic; font-size: 1.15rem; color: var(--text-mid); max-width: 50ch; margin: 0 auto 2rem; line-height: 1.7; }
+.hero-promise { display: inline-block; background: var(--gold-pale); border: 1.5px solid #DFC878; border-radius: 12px; padding: 1rem 1.8rem; font-size: 1.05rem; font-weight: 700; color: var(--text-mid); margin-bottom: 2.5rem; max-width: 54ch; line-height: 1.6; }
 .tick { color: var(--green); margin-right: 0.4rem; }
-
-/* HERO BUTTONS */
-.cta-group {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-justify-content: center;
-}
-
-.btn-email {
-display: inline-flex;
-align-items: center;
-gap: 0.7rem;
-background: var(--green);
-color: #000000;
-font-family: 'Nunito', sans-serif;
-font-weight: 800;
-font-size: 1rem;
-text-decoration: none;
-padding: 1rem 1.8rem;
-border-radius: 50px;
-text-align: left;
-}
-
-.btn-phone {
-display: inline-flex;
-align-items: center;
-gap: 0.7rem;
-background: var(--card-bg);
-color: var(--text-dark);
-font-family: 'Nunito', sans-serif;
-font-weight: 800;
-font-size: 1rem;
-text-decoration: none;
-padding: 1rem 1.8rem;
-border-radius: 50px;
-border: 2px solid var(--border);
-text-align: left;
-}
-
-.btn-icon { font-size: 1.3rem; flex-shrink: 0; }
-
-.btn-label {
-display: block;
-font-size: 0.72rem;
-font-weight: 700;
-letter-spacing: 0.09em;
-text-transform: uppercase;
-opacity: 0.75;
-line-height: 1;
-margin-bottom: 0.2rem;
-}
-
-.btn-value {
-display: block;
-font-size: 0.97rem;
-font-weight: 800;
-line-height: 1;
-}
+.cta-group { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 3rem; }
+.btn-email, .btn-phone { display: inline-flex; align-items: center; gap: 0.7rem; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.05rem; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; text-align: left; min-height: 56px; }
+.btn-email { background: var(--green); color: #ffffff; }
+.btn-phone { background: var(--card-bg); color: var(--text-dark); border: 2px solid var(--border); }
+.btn-icon { font-size: 1.4rem; flex-shrink: 0; }
+.btn-label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.8; line-height: 1; margin-bottom: 0.2rem; }
+.btn-value { display: block; font-size: 1rem; font-weight: 800; line-height: 1; }
+.hero-image-wrap { max-width: 700px; margin: 0 auto; border-radius: 18px 18px 0 0; overflow: hidden; box-shadow: 0 -4px 40px rgba(30,26,20,0.12); }
+.hero-image-wrap img { width: 100%; display: block; }
 
 /* COMFORT BAR */
-.comfort-bar {
-background: var(--soft-cream);
-border-top: 1.5px solid var(--border);
-border-bottom: 1.5px solid var(--border);
-padding: 1.5rem 5vw;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1.2rem 3rem;
-}
+.comfort-bar { background: var(--soft-cream); border-top: 1.5px solid var(--border); border-bottom: 1.5px solid var(--border); padding: 1.5rem 5vw; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 3rem; }
+.comfort-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.98rem; font-weight: 700; color: var(--text-mid); }
 
-.comfort-item {
-display: flex;
-align-items: center;
-gap: 0.45rem;
-font-size: 0.95rem;
-font-weight: 700;
-color: var(--text-mid);
-}
+/* COMPELLING SECTION */
+#felt { background: var(--green); padding: 4.5rem 5vw; }
+#felt h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 600; color: #ffffff; line-height: 1.25; margin-bottom: 1.2rem; max-width: 22ch; }
+.felt-sub { font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 54ch; margin-bottom: 3rem; line-height: 1.75; }
+.felt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+.felt-card { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); border-radius: var(--radius); padding: 1.6rem 1.5rem; }
+.felt-card .felt-icon { font-size: 1.8rem; display: block; margin-bottom: 0.7rem; }
+.felt-card strong { display: block; font-size: 1.05rem; font-weight: 800; color: #ffffff; margin-bottom: 0.3rem; }
+.felt-card p { font-size: 1rem; line-height: 1.65; color: rgba(255,255,255,0.92); }
+.felt-cta { margin-top: 3rem; display: inline-flex; align-items: center; gap: 0.6rem; background: #ffffff; color: var(--green); font-weight: 800; font-size: 1.05rem; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; min-height: 56px; }
 
 /* SECTIONS */
 section { padding: 4.5rem 5vw; }
 section + section { border-top: 2px solid var(--border); }
+.label { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem, 3.8vw, 2.6rem); font-weight: 600; color: var(--text-dark); line-height: 1.22; margin-bottom: 0.8rem; }
+.intro { font-size: 1.05rem; color: var(--text-mid); max-width: 58ch; margin-bottom: 2.8rem; line-height: 1.75; }
 
-.label {
-display: inline-block;
-font-size: 0.74rem;
-font-weight: 800;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: var(--gold);
-margin-bottom: 0.5rem;
-}
-
-h2 {
-font-family: 'Lora', serif;
-font-size: clamp(1.7rem, 3.8vw, 2.6rem);
-font-weight: 600;
-color: var(--text-dark);
-line-height: 1.22;
-margin-bottom: 0.8rem;
-}
-
-.intro {
-font-size: 1.05rem;
-color: var(--text-mid);
-max-width: 58ch;
-margin-bottom: 2.8rem;
-}
-
-/* WHO THIS IS FOR */
+/* WHO */
 #who { background: var(--green-pale); }
-
-.who-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-gap: 1.2rem;
-}
-
-.who-card {
-background: var(--card-bg);
-border: 1.5px solid var(--green-border);
-border-radius: var(--radius);
-padding: 1.6rem 1.5rem;
-font-size: 1rem;
-color: var(--text-mid);
-line-height: 1.65;
-}
-
-.who-card strong {
-display: block;
-font-size: 1.05rem;
-color: var(--text-dark);
-margin-bottom: 0.35rem;
-font-weight: 800;
-}
+.who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1.2rem; }
+.who-card { background: var(--card-bg); border: 1.5px solid var(--green-border); border-radius: var(--radius); padding: 1.6rem 1.5rem; font-size: 1rem; color: var(--text-mid); line-height: 1.65; }
+.who-card strong { display: block; font-size: 1.05rem; color: var(--text-dark); margin-bottom: 0.35rem; font-weight: 800; }
 
 /* SERVICES */
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-gap: 1.3rem;
-}
-
-.service-card {
-background: var(--card-bg);
-border: 1.5px solid var(--border);
-border-radius: var(--radius);
-padding: 1.8rem 1.6rem;
-box-shadow: var(--shadow);
-}
-
-.s-icon {
-font-size: 1.9rem;
-margin-bottom: 0.8rem;
-display: block;
-}
-
-.service-card h3 {
-font-family: 'Lora', serif;
-font-size: 1.15rem;
-font-weight: 600;
-color: var(--text-dark);
-margin-bottom: 0.4rem;
-}
-
-.service-card p {
-font-size: 0.96rem;
-color: var(--text-soft);
-line-height: 1.7;
-}
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1.3rem; }
+.service-card { background: var(--card-bg); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.8rem 1.6rem; box-shadow: var(--shadow); }
+.s-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+.service-card h3 { font-family: 'Lora', serif; font-size: 1.18rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
+.service-card p { font-size: 0.98rem; color: var(--text-soft); line-height: 1.7; }
 
 /* HOW IT WORKS */
 #how { background: var(--soft-cream); }
-
 .steps { display: flex; flex-direction: column; gap: 1.1rem; max-width: 720px; }
+.step { background: var(--card-bg); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.6rem 1.8rem; display: grid; grid-template-columns: 52px 1fr; gap: 1.3rem; align-items: start; box-shadow: var(--shadow); }
+.step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--gold-pale); border: 2px solid #DFC878; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600; color: var(--gold); flex-shrink: 0; }
+.step h3 { font-family: 'Lora', serif; font-size: 1.12rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.3rem; }
+.step p { font-size: 0.98rem; color: var(--text-soft); }
 
-.step {
-background: var(--card-bg);
-border: 1.5px solid var(--border);
-border-radius: var(--radius);
-padding: 1.6rem 1.8rem;
-display: grid;
-grid-template-columns: 52px 1fr;
-gap: 1.3rem;
-align-items: start;
-box-shadow: var(--shadow);
-}
-
-.step-num {
-width: 52px;
-height: 52px;
-border-radius: 50%;
-background: var(--gold-pale);
-border: 2px solid #DFC878;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: 'Lora', serif;
-font-size: 1.25rem;
-font-weight: 600;
-color: var(--gold);
-flex-shrink: 0;
-}
-
-.step h3 {
-font-family: 'Lora', serif;
-font-size: 1.1rem;
-font-weight: 600;
-color: var(--text-dark);
-margin-bottom: 0.3rem;
-}
-
-.step p { font-size: 0.96rem; color: var(--text-soft); }
+/* PRICING */
+.free-banner { background: var(--green-pale); border: 1.5px solid var(--green-border); border-radius: var(--radius); padding: 1.1rem 1.6rem; font-size: 1rem; font-weight: 700; color: var(--green); margin-bottom: 2.5rem; max-width: 620px; display: flex; align-items: flex-start; gap: 0.7rem; }
+.free-banner .icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; margin-bottom: 2.5rem; }
+.price-card { background: var(--card-bg); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 2rem 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 1rem; position: relative; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.price-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(30,26,20,.13); }
+.price-card.featured { border: 2px solid #DFC878; background: var(--gold-pale); }
+.featured-badge { position: absolute; top: -13px; left: 1.6rem; background: var(--gold); color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.28rem 0.9rem; border-radius: 50px; }
+.price-icon { font-size: 2rem; display: block; }
+.price-card h3 { font-family: 'Lora', serif; font-size: 1.22rem; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
+.price-amount { display: flex; align-items: baseline; gap: 0.3rem; }
+.price-amount .dollar { font-size: 1.1rem; font-weight: 800; color: var(--gold); align-self: flex-start; margin-top: 0.3rem; }
+.price-amount .number { font-family: 'Lora', serif; font-size: 2.8rem; font-weight: 600; color: var(--text-dark); line-height: 1; }
+.price-amount .per { font-size: 0.9rem; color: var(--text-soft); font-weight: 700; }
+.price-desc { font-size: 0.97rem; color: var(--text-mid); line-height: 1.65; }
+.price-features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.2rem; }
+.price-features li { font-size: 0.96rem; color: var(--text-mid); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.55; }
+.price-features li::before { content: "✔"; color: var(--green); font-size: 0.88rem; margin-top: 0.15rem; flex-shrink: 0; }
+.price-cta { display: flex; align-items: center; justify-content: center; margin-top: auto; padding: 0.85rem 1.6rem; border-radius: 50px; font-weight: 800; font-size: 1rem; text-decoration: none; text-align: center; background: var(--green); color: #ffffff; transition: opacity 0.2s; min-height: 50px; }
+.price-cta:hover { opacity: 0.88; }
+.price-card.featured .price-cta { background: var(--gold); color: #ffffff; }
+.org-card { background: var(--soft-cream); border: 2px solid var(--border); border-radius: var(--radius); padding: 2rem 1.8rem; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr auto; gap: 1.2rem 2rem; align-items: center; }
+.org-card h3 { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
+.org-card p { font-size: 0.98rem; color: var(--text-mid); line-height: 1.65; max-width: 60ch; }
+.org-price { text-align: center; flex-shrink: 0; }
+.org-price .custom-label { font-family: 'Lora', serif; font-size: 1.6rem; font-weight: 600; color: var(--gold); display: block; }
+.org-price .custom-sub { font-size: 0.82rem; color: var(--text-soft); font-weight: 700; }
+.pricing-note { margin-top: 2rem; font-size: 0.9rem; color: var(--text-soft); font-style: italic; max-width: 58ch; line-height: 1.7; }
 
 /* CONTACT */
 .contact-wrapper { max-width: 660px; }
-
-.contact-note {
-background: var(--green-pale);
-border: 1.5px solid var(--green-border);
-border-radius: var(--radius);
-padding: 1.4rem 1.6rem;
-font-size: 1rem;
-font-weight: 700;
-color: var(--green);
-line-height: 1.65;
-margin-bottom: 2rem;
-}
-
+.contact-note { background: var(--green-pale); border: 1.5px solid var(--green-border); border-radius: var(--radius); padding: 1.4rem 1.6rem; font-size: 1.02rem; font-weight: 700; color: var(--green); line-height: 1.65; margin-bottom: 2rem; }
 .contact-note em { font-style: italic; font-weight: 400; }
-
 .contact-cards { display: flex; flex-direction: column; gap: 1.1rem; }
-
-.contact-card {
-background: var(--card-bg);
-border: 2px solid var(--border);
-border-radius: var(--radius);
-padding: 1.6rem 1.8rem;
-display: flex;
-align-items: center;
-gap: 1.4rem;
-text-decoration: none;
-box-shadow: var(--shadow);
-}
-
-.cc-icon {
-width: 54px;
-height: 54px;
-border-radius: 50%;
-background: var(--gold-pale);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.6rem;
-flex-shrink: 0;
-}
-
+.contact-card { background: var(--card-bg); border: 2px solid var(--border); border-radius: var(--radius); padding: 1.6rem 1.8rem; display: flex; align-items: center; gap: 1.4rem; text-decoration: none; box-shadow: var(--shadow); min-height: 80px; }
+.cc-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; flex-shrink: 0; }
 .cc-text { flex: 1; }
+.cc-label { font-size: 0.76rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); margin-bottom: 0.2rem; }
+.cc-action { font-size: 1.02rem; font-weight: 800; color: var(--green); }
+.cc-value { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-top: 0.1rem; word-break: break-all; }
+.cc-arrow { font-size: 1.4rem; color: var(--text-soft); margin-left: auto; flex-shrink: 0; }
 
-.cc-label {
-font-size: 0.74rem;
-font-weight: 800;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: var(--text-soft);
-margin-bottom: 0.2rem;
-}
-
-.cc-action {
-font-size: 1rem;
-font-weight: 800;
-color: var(--green);
-}
-
-.cc-value {
-font-size: 1rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-top: 0.1rem;
-word-break: break-all;
-}
-
-.cc-arrow { font-size: 1.3rem; color: var(--text-soft); margin-left: auto; flex-shrink: 0; }
-
-/* PRICING */
-.free-banner{background:var(--green-pale);border:1.5px solid var(--green-border);border-radius:var(--radius);padding:1.1rem 1.6rem;font-size:1rem;font-weight:700;color:var(--green);margin-bottom:2.5rem;max-width:620px;display:flex;align-items:center;gap:.7rem;}
-.free-banner .icon{font-size:1.4rem;}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-bottom:2.5rem;}
-.price-card{background:var(--card-bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:1rem;position:relative;transition:transform .2s ease,box-shadow .2s ease;}
-.price-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(30,26,20,.13);}
-.price-card.featured{border:2px solid #DFC878;background:var(--gold-pale);}
-.featured-badge{position:absolute;top:-13px;left:1.6rem;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .9rem;border-radius:50px;}
-.price-icon{font-size:2rem;display:block;}
-.price-card h3{font-family:'Lora',serif;font-size:1.2rem;font-weight:600;color:var(--text-dark);line-height:1.3;}
-.price-amount{display:flex;align-items:baseline;gap:.3rem;}
-.price-amount .dollar{font-size:1.1rem;font-weight:800;color:var(--gold);align-self:flex-start;margin-top:.3rem;}
-.price-amount .number{font-family:'Lora',serif;font-size:2.8rem;font-weight:600;color:var(--text-dark);line-height:1;}
-.price-amount .per{font-size:.88rem;color:var(--text-soft);font-weight:700;}
-.price-desc{font-size:.95rem;color:var(--text-mid);line-height:1.65;}
-.price-features{list-style:none;display:flex;flex-direction:column;gap:.45rem;margin-top:.2rem;}
-.price-features li{font-size:.93rem;color:var(--text-mid);display:flex;align-items:flex-start;gap:.5rem;line-height:1.55;}
-.price-features li::before{content:"✔";color:var(--green);font-size:.85rem;margin-top:.15rem;flex-shrink:0;}
-.price-cta{display:inline-block;margin-top:auto;padding:.75rem 1.4rem;border-radius:50px;font-weight:800;font-size:.95rem;text-decoration:none;text-align:center;background:var(--green);color:#fff;transition:opacity .2s;}
-.price-cta:hover{opacity:.88;}
-.price-card.featured .price-cta{background:var(--gold);}
-.org-card{background:var(--soft-cream);border:2px solid var(--border);border-radius:var(--radius);padding:2rem 1.8rem;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:1.2rem 2rem;align-items:center;}
-.org-card h3{font-family:'Lora',serif;font-size:1.25rem;font-weight:600;color:var(--text-dark);margin-bottom:.4rem;}
-.org-card p{font-size:.96rem;color:var(--text-mid);line-height:1.65;max-width:60ch;}
-.org-price{text-align:center;flex-shrink:0;}
-.org-price .custom-label{font-family:'Lora',serif;font-size:1.6rem;font-weight:600;color:var(--gold);display:block;}
-.org-price .custom-sub{font-size:.82rem;color:var(--text-soft);font-weight:700;}
-.pricing-note{margin-top:2rem;font-size:.88rem;color:var(--text-soft);font-style:italic;max-width:58ch;line-height:1.7;}
-.social-bar{display:flex;justify-content:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap;}
-.social-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.2rem;border-radius:50px;font-weight:800;font-size:.88rem;text-decoration:none;border:2px solid var(--border);color:var(--text-dark);background:var(--card-bg);transition:border-color .2s,color .2s;}
-.social-btn:hover{border-color:var(--gold);color:var(--gold);}
-@media(max-width:580px){.org-card{grid-template-columns:1fr;}.org-price{text-align:left;}}
-
-/* FOOTER */
-footer {
-background: var(--soft-cream);
-border-top: 2px solid var(--border);
-padding: 2.2rem 5vw;
-text-align: center;
-}
-
-.footer-name {
-font-family: 'Lora', serif;
-font-size: 1.05rem;
-font-weight: 600;
-color: var(--text-dark);
-margin-bottom: 0.3rem;
-}
-
-footer p { font-size: 0.85rem; color: var(--text-soft); }
+/* SOCIAL + FOOTER */
+.social-bar { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.4rem; flex-wrap: wrap; }
+.social-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; border-radius: 50px; font-weight: 800; font-size: 0.95rem; text-decoration: none; border: 2px solid var(--border); color: var(--text-dark); background: var(--card-bg); transition: border-color 0.2s, color 0.2s; min-height: 48px; }
+.social-btn:hover { border-color: var(--gold); color: var(--gold); }
+footer { background: var(--soft-cream); border-top: 2px solid var(--border); padding: 2.5rem 5vw; text-align: center; }
+.footer-name { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
+footer p { font-size: 0.88rem; color: var(--text-soft); line-height: 1.8; }
 
 /* MOBILE */
 @media (max-width: 600px) {
-body { font-size: 17px; }
-header { padding: 3rem 5vw 2.8rem; }
-section { padding: 3rem 5vw; }
-.step { grid-template-columns: 44px 1fr; gap: 1rem; }
-.cc-arrow { display: none; }
-.nav-btn-email .btn-value { display: none; }
+  body { font-size: 17px; }
+  header { padding: 3rem 5vw 0; }
+  section, #felt { padding: 3rem 5vw; }
+  .step { grid-template-columns: 44px 1fr; gap: 1rem; }
+  .cc-arrow { display: none; }
+  .org-card { grid-template-columns: 1fr; }
+  .org-price { text-align: left; }
+  .btn-email, .btn-phone { width: 100%; justify-content: center; }
+  .cta-group { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
@@ -510,8 +159,8 @@ section { padding: 3rem 5vw; }
   <div class="nav-brand">Capture Corporation Tech</div>
   <div class="nav-actions">
     <a class="nav-btn nav-btn-pricing" href="#pricing">Pricing</a>
-    <a class="nav-btn nav-btn-email" href="mailto:capture.corporation.tech@gmail.com">&#9993; Send Us an Email</a>
-    <a class="nav-btn nav-btn-phone" href="tel:+16096080038">&#128222; (609) 608-0038</a>
+    <a class="nav-btn nav-btn-email" href="mailto:capture.corporation.tech@gmail.com">&#9993; Email Us</a>
+    <a class="nav-btn nav-btn-phone" href="tel:+16096080038">&#128222; Call Us</a>
   </div>
 </nav>
 
@@ -519,10 +168,10 @@ section { padding: 3rem 5vw; }
 <header>
   <div class="hero-tag">Real Help from a Real Person</div>
   <h1>Friendly Tech Help for <em>Everyday People</em></h1>
-  <p class="hero-sub">You don't need to be a tech expert. You just need someone patient, clear, and kind who will meet you exactly where you are.</p>
+  <p class="hero-sub">You don't need to be a tech expert. You just need someone patient, clear, and kind — who will meet you exactly where you are.</p>
   <div class="hero-promise">
     <span class="tick">&#10004;</span>
-    Whether you haven't touched a computer in years, or you just need a little guidance getting started you are in the right place. No judgment. Ever.
+    Whether you haven't touched a computer in years or just need a little guidance — you are in the right place. No judgment. Ever.
   </div>
   <div class="cta-group">
     <a class="btn-email" href="mailto:capture.corporation.tech@gmail.com">
@@ -540,6 +189,9 @@ section { padding: 3rem 5vw; }
       </span>
     </a>
   </div>
+  <div class="hero-image-wrap">
+    <img src="hero-image.png" alt="Don't be afraid to try new technology — we are here to help you every step of the way" />
+  </div>
 </header>
 
 <!-- COMFORT BAR -->
@@ -551,36 +203,47 @@ section { padding: 3rem 5vw; }
   <div class="comfort-item">&#129309; One real person helping you</div>
 </div>
 
+<!-- COMPELLING SECTION -->
+<section id="felt">
+  <h2>Have You Ever Felt Like Technology Left You Behind?</h2>
+  <p class="felt-sub">You are not alone. Millions of people feel exactly this way — and it has nothing to do with how smart you are. Technology moves fast and nobody slows down to explain it. That is what we are here for.</p>
+  <div class="felt-grid">
+    <div class="felt-card">
+      <span class="felt-icon">😔</span>
+      <strong>"I'm embarrassed to ask."</strong>
+      <p>There is nothing embarrassing about needing help. Every person who ever used a computer had to learn it. We never make you feel small.</p>
+    </div>
+    <div class="felt-card">
+      <span class="felt-icon">😤</span>
+      <strong>"I tried watching videos and I'm still lost."</strong>
+      <p>Videos can't answer your specific question. We can. One real conversation is worth hours of searching on your own.</p>
+    </div>
+    <div class="felt-card">
+      <span class="felt-icon">😰</span>
+      <strong>"I'm afraid I'll break something."</strong>
+      <p>You won't. And even if something goes sideways, we fix it together. That's the whole point of having someone in your corner.</p>
+    </div>
+    <div class="felt-card">
+      <span class="felt-icon">🤷</span>
+      <strong>"I don't even know where to start."</strong>
+      <p>That is perfectly fine. Just reach out. You don't need the right words. We ask a few simple questions and take it from there.</p>
+    </div>
+  </div>
+  <a class="felt-cta" href="tel:+16096080038">&#128222; &nbsp;Call Us — We Pick Up</a>
+</section>
+
 <!-- WHO THIS IS FOR -->
 <section id="who">
   <span class="label">Who We Serve</span>
   <h2>This Is for You If...</h2>
   <p class="intro">You don't have to know what's wrong or what to call it. If any of these sound like you, we can help.</p>
   <div class="who-grid">
-    <div class="who-card">
-      <strong>You feel embarrassed asking for help</strong>
-      There is nothing embarrassing about it. Everyone starts somewhere. We have helped people at every level and we never make you feel small.
-    </div>
-    <div class="who-card">
-      <strong>You haven't used a computer much lately</strong>
-      Maybe life got busy or things changed. We will meet you where you are and get you comfortable again, at your own pace.
-    </div>
-    <div class="who-card">
-      <strong>You're not sure where to even begin</strong>
-      That is perfectly fine. Just reach out. You don't need to explain it perfectly. We will ask a few simple questions and take it from there.
-    </div>
-    <div class="who-card">
-      <strong>You've tried YouTube and still feel lost</strong>
-      Videos can't answer your specific question. We can. One live session is worth hours of searching on your own.
-    </div>
-    <div class="who-card">
-      <strong>You want to understand, not just be shown</strong>
-      We explain as we go. By the end of a session you will know what we did and why so you feel more confident next time.
-    </div>
-    <div class="who-card">
-      <strong>You're nervous about reaching out online</strong>
-      That is exactly why our contact information is right at the top of this page. A short email or a quick call is all it takes. We handle the rest.
-    </div>
+    <div class="who-card"><strong>You feel embarrassed asking for help</strong>There is nothing embarrassing about it. Everyone starts somewhere. We have helped people at every level and we never make you feel small.</div>
+    <div class="who-card"><strong>You haven't used a computer much lately</strong>Maybe life got busy or things changed. We will meet you where you are and get you comfortable again, at your own pace.</div>
+    <div class="who-card"><strong>You're not sure where to even begin</strong>That is perfectly fine. Just reach out. You don't need to explain it perfectly. We will ask a few simple questions and take it from there.</div>
+    <div class="who-card"><strong>You've tried YouTube and still feel lost</strong>Videos can't answer your specific question. We can. One live session is worth hours of searching on your own.</div>
+    <div class="who-card"><strong>You want to understand, not just be shown</strong>We explain as we go. By the end of a session you will know what we did and why so you feel more confident next time.</div>
+    <div class="who-card"><strong>You're nervous about reaching out online</strong>That is exactly why our contact information is right at the top of this page. A short email or a quick call is all it takes. We handle the rest.</div>
   </div>
 </section>
 
@@ -588,38 +251,14 @@ section { padding: 3rem 5vw; }
 <section id="services">
   <span class="label">What We Help With</span>
   <h2>Our Services</h2>
-  <p class="intro">From basic questions to bigger problems if it involves a computer, a phone, or a device, we can help you work through it.</p>
+  <p class="intro">From basic questions to bigger problems — if it involves a computer, a phone, or a device, we can help you work through it.</p>
   <div class="services-grid">
-    <div class="service-card">
-      <span class="s-icon">&#129302;</span>
-      <h3>AI Tools and Setup</h3>
-      <p>Curious about AI but not sure where to start? We will show you what it can do for you step by step, in plain language, no tech background needed.</p>
-    </div>
-    <div class="service-card">
-      <span class="s-icon">&#128187;</span>
-      <h3>Computer Troubleshooting</h3>
-      <p>Slow, frozen, crashing, or just acting strange? We will look at it together over Zoom and get it working again no need to take it anywhere.</p>
-    </div>
-    <div class="service-card">
-      <span class="s-icon">&#128196;</span>
-      <h3>Microsoft Office Help</h3>
-      <p>Word, Excel, PowerPoint, Outlook we guide you through it at your speed. No rushing, no confusing shortcuts you didn't ask for.</p>
-    </div>
-    <div class="service-card">
-      <span class="s-icon">&#9999;</span>
-      <h3>Document Drafting</h3>
-      <p>Need a letter, form, or proposal written up? We will put it together cleanly and professionally ready to print, send, or submit.</p>
-    </div>
-    <div class="service-card">
-      <span class="s-icon">&#128424;</span>
-      <h3>Printer and Device Setup</h3>
-      <p>Printers are notoriously frustrating. We will connect it, test it, and make sure it works walking you through every step.</p>
-    </div>
-    <div class="service-card">
-      <span class="s-icon">&#128225;</span>
-      <h3>Wi-Fi and Internet Help</h3>
-      <p>Slow connection, devices dropping off, or nothing connecting at all we will troubleshoot it with you and get you back online.</p>
-    </div>
+    <div class="service-card"><span class="s-icon">&#129302;</span><h3>AI Tools and Setup</h3><p>Curious about AI but not sure where to start? We will show you what it can do for you step by step, in plain language — no tech background needed.</p></div>
+    <div class="service-card"><span class="s-icon">&#128187;</span><h3>Computer Troubleshooting</h3><p>Slow, frozen, crashing, or just acting strange? We will look at it together over Zoom and get it working again — no need to take it anywhere.</p></div>
+    <div class="service-card"><span class="s-icon">&#128196;</span><h3>Office Software Help</h3><p>Word processing, spreadsheets, presentations, email — we guide you through it at your speed. No rushing, no confusing shortcuts you didn't ask for.</p></div>
+    <div class="service-card"><span class="s-icon">&#9999;&#65039;</span><h3>Document Drafting</h3><p>Need a letter, form, or proposal written up? We will put it together cleanly and professionally — ready to print, send, or submit.</p></div>
+    <div class="service-card"><span class="s-icon">&#128424;&#65039;</span><h3>Printer and Device Setup</h3><p>Printers are notoriously frustrating. We will connect it, test it, and make sure it works — walking you through every step.</p></div>
+    <div class="service-card"><span class="s-icon">&#128225;</span><h3>Wi-Fi and Internet Help</h3><p>Slow connection, devices dropping off, or nothing connecting at all — we will troubleshoot it with you and get you back online.</p></div>
   </div>
 </section>
 
@@ -629,34 +268,10 @@ section { padding: 3rem 5vw; }
   <h2>Here's Exactly What Happens</h2>
   <p class="intro">Simple steps. No forms, no confusion, no surprises. This is all it takes:</p>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div>
-        <h3>You Reach Out</h3>
-        <p>Send a short email or give us a call. A sentence or two is plenty. Just tell us what is going on you do not need to know the technical name for it. We will figure it out together.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div>
-        <h3>We Pick a Time That Works for You</h3>
-        <p>We will schedule a Zoom session at a day and time that fits your life. You stay right where you are at home, comfortable, no travel needed.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div>
-        <h3>We Work Through It Together at Your Pace</h3>
-        <p>Ask questions any time. Nothing is too basic. We do not move on until you feel good. You will finish the session knowing what happened and why.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div>
-        <h3>Payment Is Handled Simply and Directly</h3>
-        <p>We talk through payment with you after your session. No surprises, no complicated checkout. We work with your situation.</p>
-      </div>
-    </div>
+    <div class="step"><div class="step-num">1</div><div><h3>You Reach Out</h3><p>Send a short email or give us a call. A sentence or two is plenty. Just tell us what is going on — you do not need to know the technical name for it. We will figure it out together.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div><h3>We Pick a Time That Works for You</h3><p>We will schedule a Zoom session at a day and time that fits your life. You stay right where you are — at home, comfortable, no travel needed.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div><h3>We Work Through It Together at Your Pace</h3><p>Ask questions any time. Nothing is too basic. We do not move on until you feel good. You will finish the session knowing what happened and why.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div><h3>Payment Is Handled Simply and Directly</h3><p>We talk through payment with you after your session. No surprises, no complicated checkout. We work with your situation.</p></div></div>
   </div>
 </section>
 
@@ -665,21 +280,15 @@ section { padding: 3rem 5vw; }
   <span class="label">Simple, Honest Pricing</span>
   <h2>Services &amp; Rates</h2>
   <p class="intro">No hidden fees. No confusing packages. Just clear, fair pricing for real help delivered right to your screen over Zoom.</p>
-
   <div class="free-banner">
     <span class="icon">🎁</span>
     <span>Your <strong>free 20-minute introductory consultation is for new clients only</strong> — no commitment, no pressure. Just a chance to talk and see if we're a good fit.</span>
   </div>
-
   <div class="pricing-grid">
     <div class="price-card">
       <span class="price-icon">💻</span>
       <h3>Single Session</h3>
-      <div class="price-amount">
-        <span class="dollar">$</span>
-        <span class="number">45</span>
-        <span class="per">/ session</span>
-      </div>
+      <div class="price-amount"><span class="dollar">$</span><span class="number">45</span><span class="per">/ session</span></div>
       <p class="price-desc">One focused Zoom session to tackle whatever you need help with right now.</p>
       <ul class="price-features">
         <li>Up to 40 minutes via Zoom</li>
@@ -689,16 +298,11 @@ section { padding: 3rem 5vw; }
       </ul>
       <a class="price-cta" href="mailto:capture.corporation.tech@gmail.com?subject=Single Session Inquiry">Book a Session</a>
     </div>
-
     <div class="price-card featured">
       <div class="featured-badge">Most Popular</div>
       <span class="price-icon">📅</span>
       <h3>Monthly Support Plan</h3>
-      <div class="price-amount">
-        <span class="dollar">$</span>
-        <span class="number">120</span>
-        <span class="per">/ month</span>
-      </div>
+      <div class="price-amount"><span class="dollar">$</span><span class="number">120</span><span class="per">/ month</span></div>
       <p class="price-desc">Ongoing support so you always have someone to call when something isn't working.</p>
       <ul class="price-features">
         <li>Four 40-minute sessions per month</li>
@@ -709,15 +313,10 @@ section { padding: 3rem 5vw; }
       </ul>
       <a class="price-cta" href="mailto:capture.corporation.tech@gmail.com?subject=Monthly Plan Inquiry">Get Started</a>
     </div>
-
     <div class="price-card">
       <span class="price-icon">🎓</span>
       <h3>Digital Literacy Bundle</h3>
-      <div class="price-amount">
-        <span class="dollar">$</span>
-        <span class="number">75</span>
-        <span class="per">/ session</span>
-      </div>
+      <div class="price-amount"><span class="dollar">$</span><span class="number">75</span><span class="per">/ session</span></div>
       <p class="price-desc">Structured learning sessions designed to build real confidence with technology step by step.</p>
       <ul class="price-features">
         <li>Customized lesson plan</li>
@@ -728,7 +327,6 @@ section { padding: 3rem 5vw; }
       <a class="price-cta" href="mailto:capture.corporation.tech@gmail.com?subject=Digital Literacy Bundle Inquiry">Learn More</a>
     </div>
   </div>
-
   <div class="org-card">
     <div>
       <h3>🏢 Organizations, Churches &amp; Community Groups</h3>
@@ -739,7 +337,6 @@ section { padding: 3rem 5vw; }
       <span class="custom-sub">Contact for quote</span>
     </div>
   </div>
-
   <p class="pricing-note">* All sessions conducted via Zoom (40 minutes per session on free tier). Payment accepted through major cards and digital wallets. Sessions may be rescheduled with 24 hours notice.</p>
 </section>
 
@@ -750,14 +347,14 @@ section { padding: 3rem 5vw; }
   <p class="intro">There is no wrong way to reach out. You do not need the perfect words. Just contact us and we will handle the rest.</p>
   <div class="contact-wrapper">
     <div class="contact-note">
-      &#128155; Not sure what to write? Try this: <em>"Hi, I need some help with my computer."</em> That is enough. We will take it from there no pressure, no judgment.
+      &#128155; Not sure what to write? Try this: <em>"Hi, I need some help with my computer."</em> That is enough. We will take it from there — no pressure, no judgment.
     </div>
     <div class="contact-cards">
       <a class="contact-card" href="mailto:capture.corporation.tech@gmail.com">
         <div class="cc-icon">&#9993;</div>
         <div class="cc-text">
           <div class="cc-label">Send Us an Email</div>
-          <div class="cc-action">Click here to email us now</div>
+          <div class="cc-action">Tap here to email us now</div>
           <div class="cc-value">capture.corporation.tech@gmail.com</div>
         </div>
         <div class="cc-arrow">&#8594;</div>
@@ -766,7 +363,7 @@ section { padding: 3rem 5vw; }
         <div class="cc-icon">&#128222;</div>
         <div class="cc-text">
           <div class="cc-label">Call or Text</div>
-          <div class="cc-action">Click here to call us now</div>
+          <div class="cc-action">Tap here to call us now</div>
           <div class="cc-value">(609) 608-0038</div>
         </div>
         <div class="cc-arrow">&#8594;</div>
@@ -778,12 +375,12 @@ section { padding: 3rem 5vw; }
 <!-- FOOTER -->
 <footer>
   <div class="social-bar">
-    <a class="social-btn" href="https://www.facebook.com/profile.php?id=61576849937900" target="_blank">📘 Facebook</a>
-    <a class="social-btn" href="https://www.instagram.com/capturecorporationtech" target="_blank">📸 Instagram</a>
+    <a class="social-btn" href="https://www.facebook.com/profile.php?id=61589038243573" target="_blank" rel="noopener">📘 &nbsp;Facebook</a>
+    <a class="social-btn" href="https://www.instagram.com/capture.corporation.tech/" target="_blank" rel="noopener">📸 &nbsp;Instagram</a>
   </div>
   <div class="footer-name">Capture Corporation Tech</div>
   <p>Baltimore, MD &nbsp;&middot;&nbsp; Virtual Sessions Available Nationwide &nbsp;&middot;&nbsp; &copy; 2026</p>
-  <p style="margin-top:0.4rem;">&#128222; (609) 608-0038 &nbsp;&middot;&nbsp; &#9993; capture.corporation.tech@gmail.com</p>
+  <p>&#128222; (609) 608-0038 &nbsp;&middot;&nbsp; &#9993; capture.corporation.tech@gmail.com</p>
 </footer>
 
 </body>
